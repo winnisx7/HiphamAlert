@@ -1,0 +1,29 @@
+## Interface: 100200
+## Version: 1.0.0
+## Title: HiphamAlert
+## Notes: HiphamAlert Combat Alert Addon
+## Author: 힙햄
+## SavedVariables: HiphamAlertDB
+
+HiphamAlert.xml
+Locales\locales.xml
+
+HiphamAlert.lua
+Config\Config.lua
+Config\Config_SpellSelection.lua
+
+Asset\SpellList\DefaultSpellList.lua
+Asset\SpellList\GeneralSpellList.lua
+Asset\SpellList\DeathKnightSpellList.lua
+Asset\SpellList\DemonHunterSpellList.lua
+Asset\SpellList\DruidSpellList.lua
+Asset\SpellList\EvokerSpellList.lua
+Asset\SpellList\HunterSpellList.lua
+Asset\SpellList\MageSpellList.lua
+Asset\SpellList\MonkSpellList.lua
+Asset\SpellList\PaladinSpellList.lua
+Asset\SpellList\PriestSpellList.lua
+Asset\SpellList\RogueSpellList.lua
+Asset\SpellList\ShamanSpellList.lua
+Asset\SpellList\WarlockSpellList.lua
+Asset\SpellList\WarriorSpellList.lua
