@@ -24,25 +24,12 @@ function HHAL:OnInitialize()
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileCopied", "ProfileChanged")
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileReset", "ProfileChanged")
 	HHDB = HHAL.DB.profile
+
+	HHAL:SetupMinimapIcon()
 end
 
 function HHAL:OnEnable()
-	local minimapIcon = LibStub("LibDataBroker-1.1"):NewDataObject("HiphamAlert", {
-		type = "data source",
-		text = HHAL:ColorText(LC["ADDON_NAME"], HHAL.Color.Key),
-		icon = "Interface\\AddOns\\HiphamAlert\\Asset\\SourceImages\\Logo_Hipham.blp", 
-		OnClick = function()
-			HHAL:ShowConfigNewFrame()
-		end,
-		OnTooltipShow = function(tooltip)
-			if not tooltip or not tooltip.AddLine then return end
-			tooltip:AddLine(HHAL:ColorText(LC["ADDON_NAME"], HHAL.Color.Key))
-			tooltip:AddLine(LC["Click to toggle HiphamAlert Option Window"])
-			-- LibStub("AceAddon-3.0"):GetAddon("HiphamAlert"):debugPrint("!!!!")
-		end,
-	})
-	local LDB = LibStub("LibDBIcon-1.0")
-	LDB:Register("HiphamAlert_MinimapIcon", minimapIcon, HHDB.minimap) -- 미니맵
+	HHAL:RefreshMinimapIcon()
 
 	HHAL:RegisterEvent("PLAYER_ENTERING_WORLD")
 	HHAL:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
@@ -59,16 +46,35 @@ function HHAL:ProfileChanged()
 	ReloadUI()
 end
 
-function HHAL:HideMinimapIcon(isHidden)
+function HHAL:SetupMinimapIcon()
+	local minimapIcon = LibStub("LibDataBroker-1.1"):NewDataObject("HiphamAlert", {
+		type = "data source",
+		text = HHAL:ColorText(LC["Name"], HHAL.Color.Key),
+		icon = "Interface\\AddOns\\HiphamAlert\\Asset\\SourceImages\\Logo_Hipham.blp", 
+		OnClick = function()
+			HHAL:ShowConfigNewFrame()
+		end,
+		OnTooltipShow = function(tooltip)
+			if not tooltip or not tooltip.AddLine then return end
+			tooltip:AddLine(HHAL:ColorText(LC["Name"], HHAL.Color.Key))
+			tooltip:AddLine(LC["Click to toggle HiphamAlert Option Window"])
+			-- LibStub("AceAddon-3.0"):GetAddon("HiphamAlert"):debugPrint("!!!!")
+		end,
+	})
 	local LDB = LibStub("LibDBIcon-1.0")
-	if isHidden then
-		LDB:Show("HiphamAlert_MinimapIcon")
-	else
+	LDB:Register("HiphamAlert_MinimapIcon", minimapIcon, HHDB.minimap)
+end
+
+function HHAL:RefreshMinimapIcon()
+	local LDB = LibStub("LibDBIcon-1.0")
+	if HHDB.minimap.hide then
 		LDB:Hide("HiphamAlert_MinimapIcon")
+	else
+		LDB:Show("HiphamAlert_MinimapIcon")
 	end
 end
 
-function HHAL:checkAlertAvailableInstance()
+function HHAL:CheckAlertAvailableInstance()
 	local name, instanceType, difficultyID, difficultyName, maxPlayers, 
 	dynamicDifficulty, isDynamic, instanceID, instanceGroupSize, LfgDungeonID = GetInstanceInfo()
 
@@ -81,7 +87,7 @@ function HHAL:checkAlertAvailableInstance()
 	elseif instanceType  == "party" then
 		HHAL.currentInstance = "Dungeon"
 		HHAL.isVoiceAlertAvailableInstance = HHDB.isVoiceAlertEnabled_dungeon
-	elseif instanceType  == "scenario" then -- 시나리오도 파티 취급
+	elseif instanceType  == "scenario" then
 		HHAL.currentInstance = "Dungeon"
 		HHAL.isVoiceAlertAvailableInstance = HHDB.isVoiceAlertEnabled_dungeon
 	elseif instanceType  == "raid" then
@@ -93,29 +99,38 @@ function HHAL:checkAlertAvailableInstance()
 	end
 end
 
-function HHAL:voiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, spellId, spellName, spellSchool)
-	if (HHDB.isVoiceAlertEnabled) then else return end
-	if (HHAL.isVoiceAlertAvailableInstance) then else return end
+function HHAL:VoiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, spellId, spellName, spellSchool)
+	if HHDB.isVoiceAlertEnabled then else return end
+	if HHAL.isVoiceAlertAvailableInstance then else return end
+	if HHAL:VoiceAlertSpellEnabled(eventType, spellId) then else return end
 
-	if (CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_ME)) 
-	or (CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_MINE)) 
-	or (CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_MY_PET))
-	then
-		if (HHDB.isVoiceAlertEnabled_absoluteMe) then
-			if HHAL:voiceAlertSpellEnabled(eventType, spellId) then
-				HHAL:playSound(HHAL:findVoiceAlertSpell(eventType, spellId))
-			end
+	if HHDB.isVoiceAlertTargetMine then
+		if CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_ME)
+		or CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_MINE)
+		or CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_MY_PET)
+		then
+			HHAL:PlaySound(HHAL:FindVoiceAlertSpell(eventType, spellId))
+			return
 		end
-	elseif (CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_FRIENDLY_UNITS))
-	or (CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_HOSTILE_PLAYERS)) 
-	then
-		if HHAL:voiceAlertSpellEnabled(eventType, spellId) then
-			HHAL:playSound(HHAL:findVoiceAlertSpell(eventType, spellId))
+	end
+	if HHDB.isVoiceAlertTargetAlliesUnitEnabled then
+		if CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_FRIENDLY_UNITS)
+		then
+			HHAL:PlaySound(HHAL:FindVoiceAlertSpell(eventType, spellId))
+			return
+		end
+	end
+	if HHDB.isVoiceAlertTargetEnemyUnitEnabled then
+		if CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_HOSTILE_PLAYERS)
+		or CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_HOSTILE_UNITS)
+		then
+			HHAL:PlaySound(HHAL:FindVoiceAlertSpell(eventType, spellId))
+			return
 		end
 	end
 end
 
-function HHAL:voiceAlertSpellEnabled(eventType, spellId)
+function HHAL:VoiceAlertSpellEnabled(eventType, spellId)
 	if eventType == "SPELL_AURA_APPLIED"
 	or eventType == "SPELL_AURA_REMOVED"
 	or eventType == "SPELL_CAST_START"
@@ -123,10 +138,12 @@ function HHAL:voiceAlertSpellEnabled(eventType, spellId)
 	or eventType == "SPELL_EMPOWER_START"
 	then
 		return HHDB.voiceAlertSpellList[spellId]
+	else
+		return false
 	end
 end
 
-function HHAL:findVoiceAlertSpell(eventType, spellId)
+function HHAL:FindVoiceAlertSpell(eventType, spellId)
 	if eventType == "SPELL_AURA_APPLIED"
 	or eventType == "SPELL_AURA_REMOVED"
 	or eventType == "SPELL_CAST_START"
@@ -138,36 +155,16 @@ function HHAL:findVoiceAlertSpell(eventType, spellId)
 	end
 end
 
-function HHAL:playSound(spell)
-	if (spell ~= nil) then else return end
-	local fileString = spell
-	local fileName = (fileString:match("(.-_.-_.-)_"))
-	if (fileName ~= nil) then
-		PlaySoundFile("Interface\\Addons\\"..HHDB.voice_path.."\\"..fileName..".mp3", HHDB.voice_play_channel);
-	else
-		PlaySoundFile("Interface\\Addons\\"..HHDB.voice_path.."\\"..fileString..".mp3", HHDB.voice_play_channel);
-	end
+function HHAL:PlaySound(spell)
+	if spell == nil then return end
+	PlaySoundFile("Interface\\Addons\\"..HHDB.voice_path.."\\"..spell..".mp3", HHDB.voice_play_channel);
 end
 
 function HHAL:PLAYER_ENTERING_WORLD(event, isLogin, isReload)
-	HHAL:checkAlertAvailableInstance()
+	HHAL:CheckAlertAvailableInstance()
 	
 	local success = C_ChatInfo.RegisterAddonMessagePrefix("HiphamAlert") -- Addon name.
 	local CurrentEnglishFaction, CurrentLocalizedFaction = UnitFactionGroup("Player") --String - The UnitId of the unit to check (Tested with "player", "pet", "party1", hostile "target")
-
-	if isLogin then
-		HHAL:debugPrint("[Login] " .. HHAL.currentInstance .. " " .. CurrentEnglishFaction .." ".."(".. LC["ADDON_VERSION"] ..")")
-	
-	elseif isReload then
-		HHAL:debugPrint("[Reloaded] " .. HHAL.currentInstance .. " " .. CurrentEnglishFaction .." ".."(".. LC["ADDON_VERSION"] ..")")
-	
-	else --따른 인스턴스로 전환시..
-		if (HHAL.CurrentPVPorPVE == "pvp") then
-			HHAL:debugPrint("[New Instances] " .. HHAL.currentInstance .. " " .. CurrentEnglishFaction .." ".." Loaded for PVP".."(".. LC["ADDON_VERSION"] ..")")
-		else
-			HHAL:debugPrint("[New Instances] " .. HHAL.currentInstance .. " " .. CurrentEnglishFaction .." ".." Loaded for PVE".."(".. LC["ADDON_VERSION"] ..")")
-		end
-	end
 end
 
 function HHAL:COMBAT_LOG_EVENT_UNFILTERED(event, ...) 
@@ -175,15 +172,15 @@ function HHAL:COMBAT_LOG_EVENT_UNFILTERED(event, ...)
 	destGUID, destName, destFlags, destFlags2, spellId, spellName, spellSchool, auraType = CombatLogGetCurrentEventInfo()
 
 	if sourceGUID == UnitGUID("player") then
-		HHAL:debugPrint("-------------------------------------------")
-		HHAL:debugPrint(eventType, spellName, spellId)
+		HHAL:DebugPrint("-------------------------------------------")
+		HHAL:DebugPrint(eventType, spellName, spellId)
 		local name, rank, icon, castTime, minRange, maxRange = GetSpellInfo(spellId)
-		HHAL:debugPrint(castTime)
+		HHAL:DebugPrint(castTime)
 		local cooldownMS, gcdMS = GetSpellBaseCooldown(spellId)
-		HHAL:debugPrint(cooldownMS, gcdMS)
+		HHAL:DebugPrint(cooldownMS, gcdMS)
 	end
 
-	HHAL:voiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, spellId, spellName, spellSchool)
+	HHAL:VoiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, spellId, spellName, spellSchool)
 end
 
 function HHAL:ColorText(text, color)
@@ -243,7 +240,7 @@ local function tprint(tbl, indent)
 	return toprint
 end
 
-function HHAL:debugPrint(...)
+function HHAL:DebugPrint(...)
 	local HHDB = HHAL.DB.profile
 	if HHDB.DEBUG_MODE then
 		for _, v in ipairs {...} do

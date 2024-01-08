@@ -10,11 +10,11 @@ local function Set(info, value)
 	HHDB.voiceAlertSpellList[spellId] = isEnabled
 	if isEnabled then
 		if HHAL.spellList.default.SPELL_CAST_SUCCESS[spellId] then
-			HHAL:playSound(HHAL.spellList.default.SPELL_CAST_SUCCESS[spellId])
+			HHAL:PlaySound(HHAL.spellList.default.SPELL_CAST_SUCCESS[spellId])
 		elseif HHAL.spellList.default.SPELL_CAST_START[spellId] then
-			HHAL:playSound(HHAL.spellList.default.SPELL_CAST_START[spellId])
+			HHAL:PlaySound(HHAL.spellList.default.SPELL_CAST_START[spellId])
 		elseif HHAL.spellList.default.SPELL_AURA_APPLIED[spellId] then
-			HHAL:playSound(HHAL.spellList.default.SPELL_AURA_APPLIED[spellId])
+			HHAL:PlaySound(HHAL.spellList.default.SPELL_AURA_APPLIED[spellId])
 		end
 	end
 end
@@ -78,7 +78,7 @@ end
 function HHAL:INIT_ModuleSpellSelection(options)
 	HHDB = HHAL.DB.profile
 	
-	options.args.spellAlert.args.spellSelection.args = {
+	options.args.spell.args.selection.args = {
 		tab = {
 			type = "group",
 			name = LC["Spell List"],

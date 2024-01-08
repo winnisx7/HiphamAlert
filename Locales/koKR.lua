@@ -1,15 +1,8 @@
 local LC = LibStub("AceLocale-3.0"):NewLocale("HiphamAlert", "koKR")
 if not LC then return end
 
-LC["ADDON_NAME"] = "힙햄알럿"
-LC["ADDON_VERSION"] = "1.0.0"
-LC["GAME_VERSION"] = "10.2.0"
-LC["Addon_Intro"] = [[|cFFFFFFFF힙햄알럿(1.0.0)|r |cffff7f00for DragonFlight(10.2.0)|r
-
-|cffFFF500[힙햄알럿 소개]|r
-힘햅알럿은 대상이 시전한 중요한 주문을 알리기 위한 전투 알림 애드온입니다.
-]]
-
+LC["Name"] = "힙햄알럿"
+LC["Addon_Intro"] = ""
 LC["EASTEREGG"] = "이스터 에그"
 LC["Can't Load Options in Combat"] = "전투중엔 옵션창을 불러오지 못합니다."
 LC["Click to toggle HiphamAlert Option Window"] = "클릭시 힙햄알럿 옵션창을 불러옵니다."
@@ -44,6 +37,8 @@ LC["Party Crew"] = "파티원"
 LC["Raid"] = "레이드"
 LC["Arena"] = "투기장"
 LC["Boss"] = "보스"
+LC["AlliesUnit"] = "아군"
+LC["EnemyUnit"] = "적군"
 
 LC["Everything"] = "모든것"
 LC["Self"] = "자신에게"
@@ -200,6 +195,7 @@ LC["Danger"] = "위험"
 --InstanceType
 -----------------------------------------------------------------------------------
 LC["EnableArea"] = "알림 지역"
+LC["EnableTarget"] = "알림 대상"
 LC["EnableArea options"] = "알람 사용 지역과 주문 감시 대상을 설정합니다."
 LC["Cast Alert"] = "시전 알람"
 LC["Spell Type"] = "주문 타입"
@@ -311,7 +307,7 @@ LC["Default VoicePack"] = "기본 보이스팩"
 LC["Alert All Skill"] = "모든 스킬을 알림"
 LC["Class Color Apply"] = "직업 색상 적용"
 LC["More Popups"] = "더 많은 팝업창"
-LC["No matter what happens, it tells me my skills"] = "반드시 자신의 스킬을 보이스로 알립니다."
+LC["No matter what happens, it tells me my skills"] = "자신의 스킬을 보이스로 알립니다."
 LC["Check only when absolutely necessary"] = "주의! 필요할때만 사용하세요"
 LC["If you only want to hear specific skills, please write the skill name or skill ID"] = "원하는 주문 선택, 스킬명 혹은 스킬ID를 기입하세요.(주문목록에서 선택된 주문들은 모두 무시됩니다.)"
 LC["Ignore the target limit option (Write the skill name or skill ID)"] = "기입된 주문은 타겟 제한 옵션은 무시하며 주문 타입별 대상은 적용됩니다. (대상이 멀리있어도 듣습니다.) - 주문명 혹은 주문ID를 기입하세요"

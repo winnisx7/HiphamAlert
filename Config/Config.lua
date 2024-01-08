@@ -59,12 +59,16 @@ HHAL.DATABASE_DEFAULTS = {
 		--	Spell		
 		-------------------------------------------------------
 		isVoiceAlertEnabled = true,
-		isVoiceAlertEnabled_absoluteMe = false,
-		isVoiceAlertEnabled_arena = true,
-		isVoiceAlertEnabled_battleGround = true,
+		
+		isVoiceAlertEnabled_field = true,
 		isVoiceAlertEnabled_dungeon = true,
 		isVoiceAlertEnabled_raid = true,
-		isVoiceAlertEnabled_field = true,
+		isVoiceAlertEnabled_arena = true,
+		isVoiceAlertEnabled_battleGround = true,
+
+		isVoiceAlertTargetMine = true,
+		isVoiceAlertTargetAlliesUnitEnabled = true,
+		isVoiceAlertTargetEnemyUnitEnabled = true,
 
 		voiceAlertSpellList = {},
 		-------------------------------------------------------
@@ -102,16 +106,16 @@ function HHAL:SpellOption22(order, spellname, ...)
 	local description = GetSpellDescription(spellId)
 	--local spellDescription = Description.." spell id:"..spellId
 	local name, rank, icon, castTime, minRange, maxRange = GetSpellInfo(spellId)
-	--HHAL:debugPrint(castTime)
+	--HHAL:DebugPrint(castTime)
 	local cooldownMS, gcdMS = GetSpellBaseCooldown(spellId)
-	--HHAL:debugPrint(cooldownMS, gcdMS)
+	--HHAL:DebugPrint(cooldownMS, gcdMS)
 
 	if not castTime then
-		HHAL:debugPrint(spellname)
+		HHAL:DebugPrint(spellname)
 	end
 
 	if not cooldownMS then
-		HHAL:debugPrint(spellname)
+		HHAL:DebugPrint(spellname)
 	end
 
 	if (spellname ~= nil) then
@@ -178,11 +182,11 @@ end
 function HHAL:CreateOptions()
 	local options = {
 		type = "group",
-		name = "",
+		name = LC["Name"],
 		args = {
 			about = {
 				type = "group",
-				name = HHAL:ColorText(LC["ADDON_NAME"], HHAL.Color.Key),
+				name = HHAL:ColorText(LC["Name"], HHAL.Color.Key),
 				args = {
 					about = {
 						type = "description",
@@ -212,7 +216,7 @@ function HHAL:CreateOptions()
 								get = function() return not HHDB.minimap.hide end,
 								set = function(_, newValue)
 									HHDB.minimap.hide = not newValue
-									HHAL.HideMinimapIcon(not newValue)
+									HHAL:RefreshMinimapIcon()
 								end,
 							},
 						},
@@ -260,65 +264,51 @@ function HHAL:CreateOptions()
 				},
 			},
 	
-			advance = {
-				type = "group",
-				name = LC["Advanced"],
-				set = Set,
-				get = Get,
-				order = 2,
-				args = {
-					absolute = {
-						type = "group",
-						inline = true,
-						name = LC["Expert Options"],
-						order = 21,
-						args = {
-							isVoiceAlertEnabled_absoluteMe = HHAL:MakeToggle(LC["No matter what happens, it tells me my skills"], LC["Check only when absolutely necessary"], 1, true),
-						},
-					},		
-				},
-			},
-	
-			spellAlert = {
+			spell = {
 				type = "group",
 				name = LC["Spell Alert"],
 				set = Set,
 				get = Get,
 				order = 10,
 				args = {
-					voiceAlert = {
+					enabled = {
 						type = "group",
-						inline = true,
 						name = LC["Voice Alert"],
-						order = 0,
+						order = 1,
+						inline = true,
 						args = {
 							isVoiceAlertEnabled = HHAL:MakeToggle(LC["Voice Alert Activate"], "", 1, false, false),
-							NewLineOutput1 = {
-								type= 'description',
-								order = 10,
-								name= '',
-							},
-							NewLineOutput2 = {
-								type= 'description',
-								order = 20,
-								name= '',
-							},
-							absolute_enable_skill = {
-								type = "group",
-								name = LC["EnableArea"],
-								childGroups = "tab",
-								order = 21,
-								args = {
-									isVoiceAlertEnabled_arena = HHAL:MakeToggle(LC["Arena"], "", 21, false, function() return not HHDB.isVoiceAlertEnabled end),
-									isVoiceAlertEnabled_battleGround = HHAL:MakeToggle(LC["Battleground"], "", 22, false, function() return not HHDB.isVoiceAlertEnabled end),
-									isVoiceAlertEnabled_dungeon = HHAL:MakeToggle(LC["Dungeon"], "", 26, false, function() return not HHDB.isVoiceAlertEnabled end),
-									isVoiceAlertEnabled_raid = HHAL:MakeToggle(LC["Raid"], "", 25, false, function() return not HHDB.isVoiceAlertEnabled end),
-									isVoiceAlertEnabled_field = HHAL:MakeToggle(LC["Field"], "", 24, false, function() return not HHDB.isVoiceAlertEnabled end),
-								},
-							},
 						},
 					},
-					spellSelection = {
+					area = {
+						type = "group",
+						name = LC["EnableArea"],
+						order = 2,
+						inline = true,
+						args = {
+							isVoiceAlertEnabled_field = HHAL:MakeToggle(LC["Field"], "", 1, false, nil),
+							isVoiceAlertEnabled_dungeon = HHAL:MakeToggle(LC["Dungeon"], "", 2, false, nil),
+							isVoiceAlertEnabled_raid = HHAL:MakeToggle(LC["Raid"], "", 3, false, nil),
+							isVoiceAlertEnabled_arena = HHAL:MakeToggle(LC["Arena"], "", 4, false, nil),
+							isVoiceAlertEnabled_battleGround = HHAL:MakeToggle(LC["Battleground"], "", 5, false, nil),
+						},
+						set = function(info, value)
+							Set(info, value)
+							HHAL:CheckAlertAvailableInstance()
+						end,
+					},
+					target = {
+						type = "group",
+						name = LC["EnableTarget"],
+						order = 3,
+						inline = true,
+						args = {
+							isVoiceAlertTargetMine = HHAL:MakeToggle(LC["Mine"], "", 1, false, nil),
+							isVoiceAlertTargetAlliesUnitEnabled = HHAL:MakeToggle(LC["AlliesUnit"], "", 2, false, nil),
+							isVoiceAlertTargetEnemyUnitEnabled = HHAL:MakeToggle(LC["EnemyUnit"], "", 3, false, nil),
+						},
+					},
+					selection = {
 						type = "group",
 						name = LC["Spell List"],
 						set = Set,
