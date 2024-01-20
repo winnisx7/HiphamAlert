@@ -1,14 +1,14 @@
 local LC = LibStub("AceLocale-3.0"):NewLocale("HiphamAlert", "koKR")
 if not LC then return end
 
-LC["Name"] = "힙햄알럿"
+LC["Name"] = "힙햄얼럿"
 LC["Addon_Intro"] = ""
 LC["EASTEREGG"] = "이스터 에그"
 LC["Can't Load Options in Combat"] = "전투중엔 옵션창을 불러오지 못합니다."
-LC["Click to toggle HiphamAlert Option Window"] = "클릭시 힙햄알럿 옵션창을 불러옵니다."
+LC["Click to toggle HiphamAlert Option Window"] = "클릭시 힙햄얼럿 옵션창을 불러옵니다."
 LC["Default Korean Hipham"] = "기본 한국어 힙햄"
 
-LC["Command List"] = "힙햄알럿 설정을 불러옵니다.|r|n"
+LC["Command List"] = "힙햄얼럿 설정을 불러옵니다.|r|n"
 
 -----------------------------------------------------------------------------------
 --Basic

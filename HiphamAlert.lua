@@ -188,8 +188,7 @@ function HHAL:ColorText(text, color)
 end
 
 SLASH_HIPHAMCMD1 = "/힙햄"
-SLASH_HIPHAMCMD2 = "/힙햄알럿"
-SLASH_HIPHAMCMD3 = "/HiphamAlert"
+SLASH_HIPHAMCMD2 = "/hipham"
 function SlashCmdList.HIPHAMCMD(message)
 	HHAL:ShowConfigNewFrame()
 end
@@ -203,6 +202,11 @@ function SlashCmdList.DEBUGCMD(message)
 	else
 		print(ColorRed .. "디버그 모드 꺼짐|r")
 	end
+end
+
+SLASH_RELOADCMD1 = "/리"
+function SlashCmdList.RELOADCMD(message)
+	ReloadUI()
 end
 
 ColorAlliance = "216bd6"

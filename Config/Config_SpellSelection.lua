@@ -31,11 +31,35 @@ local function Get(info)
 	end
 end
 
-local function spellOptionsGenerator(class)
+local function activationByRegionOptions(class)
 	local spellList = {}
+
 	for _, eventType in pairs(HHAL.COMBATLOG_SPELL_EVENT_TYPE) do
 		for k, v in pairs(HHAL.spellList[class][eventType]) do
 			spellList[k] = v
+		end
+	end
+
+	local args = {}
+	
+	for k, v in pairs(spellList) do
+		local spellId = tonumber(k)
+		local spellName, _, spellIcon = GetSpellInfo(spellId)
+		local spellVoiceFileName = v
+		local options = {
+			type = "toggle",
+			image = spellIcon,
+			imageCoords = { 0.07, 0.93, 0.07, 0.93 },
+			name = spellName,
+			desc = GetSpellLink(spellId),
+			order = order,
+			tooltipHyperlink = GetSpellLink(spellId),
+		}
+		
+		if v then
+			args[tostring(spellId)] = options
+		else 
+
 		end
 	end
 	
@@ -69,7 +93,7 @@ local function spellOptionsGenerator(class)
 			inline = true,
 			name = LC["Spell"],
 			order = 10,
-			args = HHAL:spellOptionsGenerator(spellList),
+			args = args,
 		},
 	}
 end
@@ -79,9 +103,9 @@ function HHAL:INIT_ModuleSpellSelection(options)
 	HHDB = HHAL.DB.profile
 	
 	options.args.spell.args.selection.args = {
-		tab = {
+		dungeon = {
 			type = "group",
-			name = LC["Spell List"],
+			name = LC["Dungeon"],
 			childGroups = "tree",
 			set = Set,
 			get = Get,
@@ -91,112 +115,112 @@ function HHAL:INIT_ModuleSpellSelection(options)
 					type = "group",
 					name = LC["Race Abilities"],
 					disabled = false,
-					order = 10,
-					args = spellOptionsGenerator("general"),
-				},
-
-				deathKnight = {
-					type = "group",
-					name = LC["Death Knight"],
-					disabled = false,
-					order = 130,
-					args = spellOptionsGenerator("deathKnight"),
-				},
-
-				demonHunter = {
-					type = "group",
-					name = LC["Demon Hunter"],
-					disabled = false,
-					order = 120,
-					args = spellOptionsGenerator("demonHunter"),
-				},
-
-				druid = {
-					type = "group",
-					name = LC["Druid"],
-					disabled = false,
-					order = 90,
-					args = spellOptionsGenerator("druid"),
-				},
-
-				evoker = {
-					type = "group",
-					name = LC["Evoker"],
-					disabled = false,
-					order = 140,
-					args = spellOptionsGenerator("evoker"),
-				},
-
-				hunter = {
-					type = "group",
-					name = LC["Hunter"],
-					disabled = false,
-					order = 30,
-					args = spellOptionsGenerator("hunter"),
-				},
-
-				Mmageage = {
-					type = "group",
-					name = LC["Mage"],
-					disabled = false,
-					order = 40,
-					args = spellOptionsGenerator("mage"),
-				},
-
-				monk = {
-					type = "group",
-					name = LC["Monk"],
-					disabled = false,
-					order = 110,
-					args = spellOptionsGenerator("monk"),
-				},
-
-				paladin = {
-					type = "group",
-					name = LC["Paladin"],
-					disabled = false,
-					order = 80,
-					args = spellOptionsGenerator("paladin"),
-				},
-
-				priest = {
-					type = "group",
-					name = LC["Priest"],
-					disabled = false,
-					order = 60,
-					args = spellOptionsGenerator("priest"),
-				},
-
-				rogue = {
-					type = "group",
-					name = LC["Rogue"],
-					disabled = false,
-					order = 50,
-					args = spellOptionsGenerator("rogue"),
-				},
-
-				shaman = {
-					type = "group",
-					name = LC["Shaman"],
-					disabled = false,
-					order = 100,
-					args = spellOptionsGenerator("shaman"),
-				},
-
-				warlock = {
-					type = "group",
-					name = LC["Warlock"],
-					disabled = false,
-					order = 70,
-					args = spellOptionsGenerator("warlock"),
+					order = 1,
+					args = activationByRegionOptions("general"),
 				},
 
 				warrior = {
 					type = "group",
 					name = LC["Warrior"],
 					disabled = false,
+					order = 11,
+					args = activationByRegionOptions("warrior"),
+				},
+
+				hunter = {
+					type = "group",
+					name = LC["Hunter"],
+					disabled = false,
+					order = 12,
+					args = activationByRegionOptions("hunter"),
+				},
+
+				mage = {
+					type = "group",
+					name = LC["Mage"],
+					disabled = false,
+					order = 13,
+					args = activationByRegionOptions("mage"),
+				},
+
+				rogue = {
+					type = "group",
+					name = LC["Rogue"],
+					disabled = false,
+					order = 14,
+					args = activationByRegionOptions("rogue"),
+				},
+
+				priest = {
+					type = "group",
+					name = LC["Priest"],
+					disabled = false,
+					order = 15,
+					args = activationByRegionOptions("priest"),
+				},
+
+				warlock = {
+					type = "group",
+					name = LC["Warlock"],
+					disabled = false,
+					order = 16,
+					args = activationByRegionOptions("warlock"),
+				},
+
+				paladin = {
+					type = "group",
+					name = LC["Paladin"],
+					disabled = false,
+					order = 17,
+					args = activationByRegionOptions("paladin"),
+				},
+
+				druid = {
+					type = "group",
+					name = LC["Druid"],
+					disabled = false,
+					order = 18,
+					args = activationByRegionOptions("druid"),
+				},
+
+				shaman = {
+					type = "group",
+					name = LC["Shaman"],
+					disabled = false,
+					order = 19,
+					args = activationByRegionOptions("shaman"),
+				},
+
+				monk = {
+					type = "group",
+					name = LC["Monk"],
+					disabled = false,
 					order = 20,
-					args = spellOptionsGenerator("warrior"),
+					args = activationByRegionOptions("monk"),
+				},
+
+				demonHunter = {
+					type = "group",
+					name = LC["Demon Hunter"],
+					disabled = false,
+					order = 21,
+					args = activationByRegionOptions("demonHunter"),
+				},
+
+				deathKnight = {
+					type = "group",
+					name = LC["Death Knight"],
+					disabled = false,
+					order = 22,
+					args = activationByRegionOptions("deathKnight"),
+				},
+
+				evoker = {
+					type = "group",
+					name = LC["Evoker"],
+					disabled = false,
+					order = 23,
+					args = activationByRegionOptions("evoker"),
 				},
 			},
 		},
