@@ -35,6 +35,14 @@ HHAL.COMBATLOG_SPELL_EVENT_TYPE = {
 	"SPELL_CAST_SUCCESS",
 }
 
+HHAL.AREA_TYPE = {
+	"Field",
+	"Dungeon",
+	"Raid",
+	"Arena",
+	"Battleground",
+}
+
 HHAL.DATABASE_DEFAULTS = {
 	profile = {
 		-------------------------------------------------------
@@ -64,7 +72,7 @@ HHAL.DATABASE_DEFAULTS = {
 		isVoiceAlertEnabled_dungeon = true,
 		isVoiceAlertEnabled_raid = true,
 		isVoiceAlertEnabled_arena = true,
-		isVoiceAlertEnabled_battleGround = true,
+		isVoiceAlertEnabled_battleground = true,
 
 		isVoiceAlertTargetMine = true,
 		isVoiceAlertTargetAlliesUnitEnabled = true,
@@ -217,7 +225,7 @@ function HHAL:CreateOptions()
 							isVoiceAlertEnabled_dungeon = HHAL:MakeToggle(LC["Dungeon"], "", 2, false, nil),
 							isVoiceAlertEnabled_raid = HHAL:MakeToggle(LC["Raid"], "", 3, false, nil),
 							isVoiceAlertEnabled_arena = HHAL:MakeToggle(LC["Arena"], "", 4, false, nil),
-							isVoiceAlertEnabled_battleGround = HHAL:MakeToggle(LC["Battleground"], "", 5, false, nil),
+							isVoiceAlertEnabled_battleground = HHAL:MakeToggle(LC["Battleground"], "", 5, false, nil),
 						},
 						set = function(info, value)
 							Set(info, value)

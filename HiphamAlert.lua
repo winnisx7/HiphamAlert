@@ -102,7 +102,8 @@ end
 function HHAL:VoiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, spellId, spellName, spellSchool)
 	if HHDB.isVoiceAlertEnabled then else return end
 	if HHAL.isVoiceAlertAvailableInstance then else return end
-	if HHAL:VoiceAlertSpellEnabled(eventType, spellId) then else return end
+	
+	if HHAL:VoiceAlertSpellEnabled(HHAL.currentInstance, eventType, spellId) then else return end
 
 	if HHDB.isVoiceAlertTargetMine then
 		if CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_ME)
@@ -130,14 +131,14 @@ function HHAL:VoiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUI
 	end
 end
 
-function HHAL:VoiceAlertSpellEnabled(eventType, spellId)
+function HHAL:VoiceAlertSpellEnabled(area, eventType, spellId)
 	if eventType == "SPELL_AURA_APPLIED"
 	or eventType == "SPELL_AURA_REMOVED"
 	or eventType == "SPELL_CAST_START"
 	or eventType == "SPELL_CAST_SUCCESS"
 	or eventType == "SPELL_EMPOWER_START"
 	then
-		return HHDB.voiceAlertSpellList[spellId]
+		return HHDB.voiceAlertSpellList[area.."_"..spellId]
 	else
 		return false
 	end
