@@ -3,26 +3,15 @@ local LC = LibStub("AceLocale-3.0"):GetLocale("HiphamAlert", "koKR")
 local HHDB = {}
 
 function HHAL:OnInitialize()
-	for _, classType in pairs(HHAL.SPELL_CLASSIFICATION) do
-		for _, eventType in pairs(HHAL.COMBATLOG_SPELL_EVENT_TYPE) do		
-			for key, value in pairs(HHAL.spellList[classType][eventType]) do
-				HHAL.spellList.default[eventType][key] = value
-			end
-		end
-	end
-
-	for _, classType in pairs(HHAL.SPELL_CLASSIFICATION) do
-		for _, eventType in pairs(HHAL.COMBATLOG_SPELL_EVENT_TYPE) do		
-			for key, value in pairs(HHAL.spellList[classType][eventType]) do
-				HHAL.DATABASE_DEFAULTS.profile.voiceAlertSpellList[key] = true
-			end
-		end
-	end
-
-	HHAL.DB = LibStub("AceDB-3.0"):New("HiphamAlertDB", HHAL.DATABASE_DEFAULTS, "Default")
+	HHAL.DB = LibStub("AceDB-3.0"):New("HiphamAlertDB", HHAL.DATABASE_DEFAULTS)
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileChanged", "ProfileChanged")
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileCopied", "ProfileChanged")
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileReset", "ProfileChanged")
+
+	if HHAL.DB.profile.version ~= "2.0.0" then
+		HHAL.DB.profile = HHAL.DATABASE_DEFAULTS.profile
+	end
+
 	HHDB = HHAL.DB.profile
 
 	HHAL:SetupMinimapIcon()
@@ -43,7 +32,7 @@ end
 
 function HHAL:ProfileChanged()
 	HHDB = HHAL.DB.profile
-	ReloadUI()
+	HHAL:SetupOptions()
 end
 
 function HHAL:SetupMinimapIcon()
@@ -80,85 +69,60 @@ function HHAL:CheckAlertAvailableInstance()
 
 	if instanceType  == "arena" then
 		HHAL.currentInstance = "Arena"
-		HHAL.isVoiceAlertAvailableInstance = HHDB.isVoiceAlertEnabled_arena
 	elseif instanceType == "pvp" then
 		HHAL.currentInstance = "Battleground"
-		HHAL.isVoiceAlertAvailableInstance = HHDB.isVoiceAlertEnabled_battleGround
 	elseif instanceType  == "party" then
 		HHAL.currentInstance = "Dungeon"
-		HHAL.isVoiceAlertAvailableInstance = HHDB.isVoiceAlertEnabled_dungeon
 	elseif instanceType  == "scenario" then
 		HHAL.currentInstance = "Dungeon"
-		HHAL.isVoiceAlertAvailableInstance = HHDB.isVoiceAlertEnabled_dungeon
 	elseif instanceType  == "raid" then
 		HHAL.currentInstance = "Raid"
-		HHAL.isVoiceAlertAvailableInstance = HHDB.isVoiceAlertEnabled_raid
 	else
 		HHAL.currentInstance = "Field"
-		HHAL.isVoiceAlertAvailableInstance = HHDB.isVoiceAlertEnabled_field
 	end
 end
 
 function HHAL:VoiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, spellId, spellName, spellSchool)
-	if HHDB.isVoiceAlertEnabled then else return end
-	if HHAL.isVoiceAlertAvailableInstance then else return end
-	
-	if HHAL:VoiceAlertSpellEnabled(HHAL.currentInstance, eventType, spellId) then else return end
+	if HHDB.voiceAlertEnabled then else return end
+	if HHDB.spellActivationArea[HHAL.currentInstance] == false then return end
 
-	if HHDB.isVoiceAlertTargetMine then
+	local knownSpell = HHDB.spellList[spellId]
+
+	if knownSpell == nil then return end
+
+	local voiceFilePath = knownSpell.voiceFilePath[eventType]
+
+	if voiceFilePath == nil then return end
+	
+	if HHDB.spellActivationTarget[HHAL.currentInstance].Mine then
 		if CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_ME)
 		or CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_MINE)
 		or CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_MY_PET)
 		then
-			HHAL:PlaySound(HHAL:FindVoiceAlertSpell(eventType, spellId))
+			HHAL:PlaySound(voiceFilePath)
 			return
 		end
 	end
-	if HHDB.isVoiceAlertTargetAlliesUnitEnabled then
+	if HHDB.spellActivationTarget[HHAL.currentInstance].AlliesUnit then
 		if CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_FRIENDLY_UNITS)
 		then
-			HHAL:PlaySound(HHAL:FindVoiceAlertSpell(eventType, spellId))
+			HHAL:PlaySound(voiceFilePath)
 			return
 		end
 	end
-	if HHDB.isVoiceAlertTargetEnemyUnitEnabled then
+	if HHDB.spellActivationTarget[HHAL.currentInstance].EnemyUnit then
 		if CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_HOSTILE_PLAYERS)
 		or CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_HOSTILE_UNITS)
 		then
-			HHAL:PlaySound(HHAL:FindVoiceAlertSpell(eventType, spellId))
+			HHAL:PlaySound(voiceFilePath)
 			return
 		end
 	end
 end
 
-function HHAL:VoiceAlertSpellEnabled(area, eventType, spellId)
-	if eventType == "SPELL_AURA_APPLIED"
-	or eventType == "SPELL_AURA_REMOVED"
-	or eventType == "SPELL_CAST_START"
-	or eventType == "SPELL_CAST_SUCCESS"
-	or eventType == "SPELL_EMPOWER_START"
-	then
-		return HHDB.voiceAlertSpellList[area.."_"..spellId]
-	else
-		return false
-	end
-end
-
-function HHAL:FindVoiceAlertSpell(eventType, spellId)
-	if eventType == "SPELL_AURA_APPLIED"
-	or eventType == "SPELL_AURA_REMOVED"
-	or eventType == "SPELL_CAST_START"
-	or eventType == "SPELL_CAST_SUCCESS"
-	then
-		return HHAL.spellList.default[eventType][spellId]
-	elseif eventType == "SPELL_EMPOWER_START" then
-		return HHAL.spellList.default["SPELL_CAST_SUCCESS"][spellId]
-	end
-end
-
-function HHAL:PlaySound(spell)
-	if spell == nil then return end
-	PlaySoundFile("Interface\\Addons\\"..HHDB.voice_path.."\\"..spell..".mp3", HHDB.voice_play_channel);
+function HHAL:PlaySound(path)
+	if path == nil then return end
+	PlaySoundFile("Interface\\Addons\\"..HHDB.voice_path.."\\"..path..".mp3", HHDB.voice_play_channel);
 end
 
 function HHAL:PLAYER_ENTERING_WORLD(event, isLogin, isReload)

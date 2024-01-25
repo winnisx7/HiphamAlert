@@ -13,26 +13,28 @@ local HHAL_SOUND_OUTPUT = {
 
 HHAL.SPELL_CLASSIFICATION = {
 	"general",
-	"deathKnight",
-	"demonHunter",
-	"druid",
-	"evoker",
+	"warrior",
 	"hunter",
 	"mage",
-	"monk",
-	"paladin",
-	"priest",
 	"rogue",
-	"shaman",
+	"priest",
 	"warlock",
-	"warrior",
+	"paladin",
+	"druid",
+	"shaman",
+	"deathKnight",
+	"monk",
+	"demonHunter",
+	"evoker",
 }
 
 HHAL.COMBATLOG_SPELL_EVENT_TYPE = {
-	"SPELL_AURA_APPLIED",
-	"SPELL_AURA_REMOVED",
 	"SPELL_CAST_START",
 	"SPELL_CAST_SUCCESS",
+	"SPELL_AURA_APPLIED",
+	"SPELL_AURA_REMOVED",
+	"SPELL_EMPOWER_START",
+	"SPELL_EMPOWER_END",
 }
 
 HHAL.AREA_TYPE = {
@@ -48,7 +50,7 @@ HHAL.DATABASE_DEFAULTS = {
 		-------------------------------------------------------
 		--	General		
 		-------------------------------------------------------
-		custom = {},
+		version = "2.0.0",
 
 		minimap = { hide = false, },
 
@@ -66,19 +68,42 @@ HHAL.DATABASE_DEFAULTS = {
 		-------------------------------------------------------
 		--	Spell		
 		-------------------------------------------------------
-		isVoiceAlertEnabled = true,
-		
-		isVoiceAlertEnabled_field = true,
-		isVoiceAlertEnabled_dungeon = true,
-		isVoiceAlertEnabled_raid = true,
-		isVoiceAlertEnabled_arena = true,
-		isVoiceAlertEnabled_battleground = true,
-
-		isVoiceAlertTargetMine = true,
-		isVoiceAlertTargetAlliesUnitEnabled = true,
-		isVoiceAlertTargetEnemyUnitEnabled = true,
-
-		voiceAlertSpellList = {},
+		voiceAlertEnabled = true,
+		spellList = HHAL.SPELL_LIST,
+		spellActivationArea = {
+			["Field"] = true,
+			["Dungeon"] = true,
+			["Raid"] = false,
+			["Arena"] = true,
+			["Battleground"] = false,
+		},
+		spellActivationTarget = {
+			["Field"] = {
+				["Mine"] = true,
+				["AlliesUnit"] = false,
+				["EnemyUnit"] = false,
+			},
+			["Dungeon"] = {
+				["Mine"] = true,
+				["AlliesUnit"] = true,
+				["EnemyUnit"] = false,
+			},
+			["Raid"] = {
+				["Mine"] = true,
+				["AlliesUnit"] = false,
+				["EnemyUnit"] = false,
+			},
+			["Arena"] = {
+				["Mine"] = true,
+				["AlliesUnit"] = false,
+				["EnemyUnit"] = true,
+			},
+			["Battleground"] = {
+				["Mine"] = false,
+				["AlliesUnit"] = false,
+				["EnemyUnit"] = false,
+			},
+		},
 		-------------------------------------------------------
 		-------------------------------------------------------
 	}	
@@ -106,11 +131,11 @@ function HHAL:MakeToggle(name, desc, order, inline, disabled)
 	}
 end
 
-local function Set(info, value)
+local function setOptions(info, value)
 	HHDB[info[#info]] = value
 end
 
-local function Get(info)
+local function getOptions(info)
 	return HHDB[info[#info]]
 end
 
@@ -134,8 +159,8 @@ function HHAL:CreateOptions()
 			general = {
 				type = "group",
 				name = LC["General"],
-				set = Set,
-				get = Get,
+				set = setOptions,
+				get = getOptions,
 				order = 1,
 				args = {
 					minimap = {
@@ -148,11 +173,11 @@ function HHAL:CreateOptions()
 								type = "toggle",
 								name = LC["Minimap Button Show"],
 								order = 1,
-								get = function() return not HHDB.minimap.hide end,
 								set = function(_, newValue)
 									HHDB.minimap.hide = not newValue
 									HHAL:RefreshMinimapIcon()
 								end,
+								get = function() return not HHDB.minimap.hide end,
 							},
 						},
 					},
@@ -190,8 +215,12 @@ function HHAL:CreateOptions()
 								min = 0,
 								step = 0.01,
 								name = LC["Volume"],
-								set = function (info, value) SetCVar ("Sound_"..HHDB.voice_play_channel.."Volume",tostring (value)) end,
-								get = function () return tonumber (GetCVar ("Sound_"..HHDB.voice_play_channel.."Volume")) end,
+								set = function(info, value) 
+									SetCVar("Sound_"..HHDB.voice_play_channel.."Volume",tostring (value)) 
+								end,
+								get = function() 
+									return tonumber(GetCVar("Sound_"..HHDB.voice_play_channel.."Volume"))
+								end,
 								order = 2,
 							},
 						},
@@ -202,8 +231,8 @@ function HHAL:CreateOptions()
 			spell = {
 				type = "group",
 				name = LC["Spell Alert"],
-				set = Set,
-				get = Get,
+				set = setOptions,
+				get = getOptions,
 				order = 10,
 				args = {
 					enabled = {
@@ -212,7 +241,12 @@ function HHAL:CreateOptions()
 						order = 1,
 						inline = true,
 						args = {
-							isVoiceAlertEnabled = HHAL:MakeToggle(LC["Voice Alert Activate"], "", 1, false, false),
+							voiceAlertEnabled = {
+								type = "toggle",
+								name = LC["Voice Alert Activate"],
+								desc = LC["Select the default output"],
+								order = 1,
+							},
 						},
 					},
 					area = {
@@ -221,26 +255,263 @@ function HHAL:CreateOptions()
 						order = 2,
 						inline = true,
 						args = {
-							isVoiceAlertEnabled_field = HHAL:MakeToggle(LC["Field"], "", 1, false, nil),
-							isVoiceAlertEnabled_dungeon = HHAL:MakeToggle(LC["Dungeon"], "", 2, false, nil),
-							isVoiceAlertEnabled_raid = HHAL:MakeToggle(LC["Raid"], "", 3, false, nil),
-							isVoiceAlertEnabled_arena = HHAL:MakeToggle(LC["Arena"], "", 4, false, nil),
-							isVoiceAlertEnabled_battleground = HHAL:MakeToggle(LC["Battleground"], "", 5, false, nil),
+							Field = {
+								type = "toggle",
+								name = LC["Field"],
+								set = function(info, newValue)
+									HHDB.spellActivationArea.Field = newValue
+								end,
+								get = function(info)
+									return HHDB.spellActivationArea.Field
+								end,
+							},
+							Dungeon = {
+								type = "toggle",
+								name = LC["Dungeon"],
+								set = function(info, newValue)
+									HHDB.spellActivationArea.Dungeon = newValue
+								end,
+								get = function(info)
+									return HHDB.spellActivationArea.Dungeon
+								end,
+							},
+							Raid = {
+								type = "toggle",
+								name = LC["Raid"],
+								set = function(info, newValue)
+									HHDB.spellActivationArea.Raid = newValue
+								end,
+								get = function(info)
+									return HHDB.spellActivationArea.Raid
+								end,
+							},
+							Arena = {
+								type = "toggle",
+								name = LC["Arena"],
+								set = function(info, newValue)
+									HHDB.spellActivationArea.Arena = newValue
+								end,
+								get = function(info)
+									return HHDB.spellActivationArea.Arena
+								end,
+							},
+							Battleground = {
+								type = "toggle",
+								name = LC["Battleground"],
+								set = function(info, newValue)
+									HHDB.spellActivationArea.Battleground = newValue
+								end,
+								get = function(info)
+									return HHDB.spellActivationArea.Battleground
+								end,
+							},
 						},
-						set = function(info, value)
-							Set(info, value)
-							HHAL:CheckAlertAvailableInstance()
-						end,
 					},
 					target = {
 						type = "group",
 						name = LC["EnableTarget"],
 						order = 3,
-						inline = true,
 						args = {
-							isVoiceAlertTargetMine = HHAL:MakeToggle(LC["Mine"], "", 1, false, nil),
-							isVoiceAlertTargetAlliesUnitEnabled = HHAL:MakeToggle(LC["AlliesUnit"], "", 2, false, nil),
-							isVoiceAlertTargetEnemyUnitEnabled = HHAL:MakeToggle(LC["EnemyUnit"], "", 3, false, nil),
+							Field = {
+								type = "group",
+								name = LC["Field"],
+								inline = true,
+								args = {
+									Mine = {
+										type = "toggle",
+										name = LC["Mine"],
+										order = 1,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Field.Mine = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Field.Mine
+										end,
+									},
+									AlliesUnit = {
+										type = "toggle",
+										name = LC["AlliesUnit"],
+										order = 2,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Field.AlliesUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Field.AlliesUnit
+										end,
+									},
+									EnemyUnit = {
+										type = "toggle",
+										name = LC["EnemyUnit"],
+										order = 3,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Field.EnemyUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Field.EnemyUnit
+										end,
+									},
+								},
+							},
+							Dungeon = {
+								type = "group",
+								name = LC["Dungeon"],
+								inline = true,
+								args = {
+									Mine = {
+										type = "toggle",
+										name = LC["Mine"],
+										order = 1,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Dungeon.Mine = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Dungeon.Mine
+										end,
+									},
+									AlliesUnit = {
+										type = "toggle",
+										name = LC["AlliesUnit"],
+										order = 2,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Dungeon.AlliesUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Dungeon.AlliesUnit
+										end,
+									},
+									EnemyUnit = {
+										type = "toggle",
+										name = LC["EnemyUnit"],
+										order = 3,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Dungeon.EnemyUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Dungeon.EnemyUnit
+										end,
+									},
+								},
+							},
+							Raid = {
+								type = "group",
+								name = LC["Raid"],
+								inline = true,
+								args = {
+									Mine = {
+										type = "toggle",
+										name = LC["Mine"],
+										order = 1,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Raid.Mine = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Raid.Mine
+										end,
+									},
+									AlliesUnit = {
+										type = "toggle",
+										name = LC["AlliesUnit"],
+										order = 2,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Raid.AlliesUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Raid.AlliesUnit
+										end,
+									},
+									EnemyUnit = {
+										type = "toggle",
+										name = LC["EnemyUnit"],
+										order = 3,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Raid.EnemyUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Raid.EnemyUnit
+										end,
+									},
+								},
+							},
+							Arena = {
+								type = "group",
+								name = LC["Arena"],
+								inline = true,
+								args = {
+									Mine = {
+										type = "toggle",
+										name = LC["Mine"],
+										order = 1,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Arena.Mine = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Arena.Mine
+										end,
+									},
+									AlliesUnit = {
+										type = "toggle",
+										name = LC["AlliesUnit"],
+										order = 2,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Arena.AlliesUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Arena.AlliesUnit
+										end,
+									},
+									EnemyUnit = {
+										type = "toggle",
+										name = LC["EnemyUnit"],
+										order = 3,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Arena.EnemyUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Arena.EnemyUnit
+										end,
+									},
+								},
+							},
+							Battleground = {
+								type = "group",
+								name = LC["Battleground"],
+								inline = true,
+								args = {
+									Mine = {
+										type = "toggle",
+										name = LC["Mine"],
+										order = 1,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Battleground.Mine = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Battleground.Mine
+										end,
+									},
+									AlliesUnit = {
+										type = "toggle",
+										name = LC["AlliesUnit"],
+										order = 2,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Battleground.AlliesUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Battleground.AlliesUnit
+										end,
+									},
+									EnemyUnit = {
+										type = "toggle",
+										name = LC["EnemyUnit"],
+										order = 3,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Battleground.EnemyUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Battleground.EnemyUnit
+										end,
+									},
+								},
+							},
 						},
 					},
 					selection = {
@@ -248,7 +519,7 @@ function HHAL:CreateOptions()
 						name = LC["Spell List"],
 						set = Set,
 						get = Get,
-						order = 10,
+						order = 4,
 						childGroups = "tab",
 						args = {
 	
