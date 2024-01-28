@@ -83,7 +83,7 @@ function HHAL:CheckAlertAvailableInstance()
 end
 
 function HHAL:VoiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, spellId, spellName, spellSchool)
-	if HHDB.voiceAlertEnabled then else return end
+	if HHDB.voiceAlertEnabled == false then return end
 	if HHDB.spellActivationArea[HHAL.currentInstance] == false then return end
 
 	local knownSpell = HHDB.spellList[spellId]
@@ -93,6 +93,8 @@ function HHAL:VoiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUI
 	local voiceFilePath = knownSpell.voiceFilePath[eventType]
 
 	if voiceFilePath == nil then return end
+
+	if knownSpell.enabled[HHAL.currentInstance] == false then return end
 	
 	if HHDB.spellActivationTarget[HHAL.currentInstance].Mine then
 		if CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_ME)
@@ -122,7 +124,7 @@ end
 
 function HHAL:PlaySound(path)
 	if path == nil then return end
-	PlaySoundFile("Interface\\Addons\\"..HHDB.voice_path.."\\"..path..".mp3", HHDB.voice_play_channel);
+	PlaySoundFile("Interface\\Addons\\"..HHDB.voice_path.."\\"..path..".mp3", HHDB.voice_play_channel)
 end
 
 function HHAL:PLAYER_ENTERING_WORLD(event, isLogin, isReload)
