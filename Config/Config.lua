@@ -94,7 +94,7 @@ HHAL.DATABASE_DEFAULTS = {
 				["EnemyUnit"] = false,
 			},
 			["Arena"] = {
-				["Mine"] = true,
+				["Mine"] = false,
 				["AlliesUnit"] = false,
 				["EnemyUnit"] = true,
 			},

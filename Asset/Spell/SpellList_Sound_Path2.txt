@@ -2,6 +2,7 @@
 
 ]]--
 
--- TEMP_SPELL = {
+
+TEMP_SPELL = {
     
--- }
+}

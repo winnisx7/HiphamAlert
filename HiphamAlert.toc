@@ -1,5 +1,5 @@
 ## Interface: 100200
-## Version: 2.1.0
+## Version: 2.1.1
 ## Title: HiphamAlert
 ## Notes: HiphamAlert Combat Alert Addon
 ## Author: 힙햄

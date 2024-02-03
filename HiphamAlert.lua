@@ -8,10 +8,6 @@ function HHAL:OnInitialize()
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileCopied", "ProfileChanged")
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileReset", "ProfileChanged")
 
-	if HHAL.DB.profile.version ~= "2.0.0" then
-		HHAL.DB.profile = HHAL.DATABASE_DEFAULTS.profile
-	end
-
 	HHDB = HHAL.DB.profile
 
 	HHAL:SetupMinimapIcon()
