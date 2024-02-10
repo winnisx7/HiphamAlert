@@ -7,13 +7,18 @@ function HHAL:OnInitialize()
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileChanged", "ProfileChanged")
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileCopied", "ProfileChanged")
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileReset", "ProfileChanged")
-
 	HHDB = HHAL.DB.profile
 
 	HHAL:SetupMinimapIcon()
 end
 
 function HHAL:OnEnable()
+	HHDB = HHAL.DB.profile
+
+	if HHDB.version ~= "2.3.0" then
+		HHAL.DB.profile = HHAL.DATABASE_DEFAULTS.profile
+	end
+
 	HHAL:RefreshMinimapIcon()
 
 	HHAL:RegisterEvent("PLAYER_ENTERING_WORLD")

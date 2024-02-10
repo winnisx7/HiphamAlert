@@ -127,39 +127,39 @@ local function activationByRegionOptions(area)
 				args = activationVoiceAlertSpellOptions(area, "rogue"),
 			},
 
-			priest = {
-				type = "group",
-				name = LC["Priest"],
-				order = 15,
-				args = activationVoiceAlertSpellOptions(area, "priest"),
-			},
-
 			warlock = {
 				type = "group",
 				name = LC["Warlock"],
-				order = 16,
+				order = 15,
 				args = activationVoiceAlertSpellOptions(area, "warlock"),
+			},
+
+			priest = {
+				type = "group",
+				name = LC["Priest"],
+				order = 16,
+				args = activationVoiceAlertSpellOptions(area, "priest"),
+			},
+
+			shaman = {
+				type = "group",
+				name = LC["Shaman"],
+				order = 17,
+				args = activationVoiceAlertSpellOptions(area, "shaman"),
 			},
 
 			paladin = {
 				type = "group",
 				name = LC["Paladin"],
-				order = 17,
+				order = 18,
 				args = activationVoiceAlertSpellOptions(area, "paladin"),
 			},
 
 			druid = {
 				type = "group",
 				name = LC["Druid"],
-				order = 18,
-				args = activationVoiceAlertSpellOptions(area, "druid"),
-			},
-
-			shaman = {
-				type = "group",
-				name = LC["Shaman"],
 				order = 19,
-				args = activationVoiceAlertSpellOptions(area, "shaman"),
+				args = activationVoiceAlertSpellOptions(area, "druid"),
 			},
 
 			deathKnight = {
