@@ -3,7 +3,7 @@ local LC = LibStub("AceLocale-3.0"):GetLocale("HiphamAlert", "koKR")
 local HHDB = {}
 
 function HHAL:OnInitialize()
-	HHAL.DB = LibStub("AceDB-3.0"):New("HiphamAlertDB", HHAL.DATABASE_DEFAULTS)
+	HHAL.DB = LibStub("AceDB-3.0"):New("HiphamAlertDB", HHAL.DATABASE_DEFAULTS, true)
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileChanged", "ProfileChanged")
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileCopied", "ProfileChanged")
 	HHAL.DB.RegisterCallback(HHAL, "OnProfileReset", "ProfileChanged")
@@ -13,11 +13,11 @@ function HHAL:OnInitialize()
 end
 
 function HHAL:OnEnable()
-	HHDB = HHAL.DB.profile
-
-	if HHDB.version ~= "2.3.0" then
-		HHAL.DB.profile = HHAL.DATABASE_DEFAULTS.profile
+	if HHDB.version ~= "2.4.0" then
+		HHAL.DB:ResetProfile()
 	end
+
+	HHDB = HHAL.DB.profile
 
 	HHAL:RefreshMinimapIcon()
 
@@ -48,7 +48,6 @@ function HHAL:SetupMinimapIcon()
 			if not tooltip or not tooltip.AddLine then return end
 			tooltip:AddLine(HHAL:ColorText(LC["Name"], HHAL.Color.Key))
 			tooltip:AddLine(LC["Click to toggle HiphamAlert Option Window"])
-			-- LibStub("AceAddon-3.0"):GetAddon("HiphamAlert"):debugPrint("!!!!")
 		end,
 	})
 	local LDB = LibStub("LibDBIcon-1.0")

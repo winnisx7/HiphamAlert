@@ -358,7 +358,7 @@ HHAL.SPELL_LIST = {
         ["id"] = 236077,
         ["class"] = "warrior",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "전사_장분"
+            ["SPELL_CAST_SUCCESS"] = "공용_장분"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -744,7 +744,7 @@ HHAL.SPELL_LIST = {
         ["id"] = 207777,
         ["class"] = "rogue",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "도적_장분"
+            ["SPELL_CAST_SUCCESS"] = "공용_장분"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -2716,7 +2716,7 @@ HHAL.SPELL_LIST = {
         ["id"] = 2006,
         ["class"] = "priest",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_부활"
+            ["SPELL_CAST_START"] = "공용_부활"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3256,7 +3256,7 @@ HHAL.SPELL_LIST = {
         ["id"] = 409293,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_잠복",
+            ["SPELL_CAST_SUCCESS"] = "술사_잠복"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3264,13 +3264,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [2008] = {
         ["id"] = 2008,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_START"] = "공용_부활",
+            ["SPELL_CAST_START"] = "공용_부활"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3278,13 +3278,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [51490] = {
         ["id"] = 51490,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_천폭",
+            ["SPELL_CAST_SUCCESS"] = "술사_천폭"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3292,13 +3292,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [198103] = {
         ["id"] = 198103,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_대정",
+            ["SPELL_CAST_SUCCESS"] = "술사_대정"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3306,13 +3306,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [118345] = {
         ["id"] = 118345,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_대정스턴",
+            ["SPELL_CAST_SUCCESS"] = "술사_대정스턴"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3320,13 +3320,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [57994] = {
         ["id"] = 57994,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_칼바",
+            ["SPELL_CAST_SUCCESS"] = "술사_칼바"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3334,13 +3334,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [51514] = {
         ["id"] = 51514,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_START"] = "술사_사술",
+            ["SPELL_CAST_START"] = "술사_사술"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3348,13 +3348,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [51886] = {
         ["id"] = 51886,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제",
+            ["SPELL_CAST_SUCCESS"] = "공용_해제"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3362,13 +3362,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [77130] = {
         ["id"] = 77130,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제",
+            ["SPELL_CAST_SUCCESS"] = "공용_해제"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3376,13 +3376,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [108271] = {
         ["id"] = 108271,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_영혼이동",
+            ["SPELL_CAST_SUCCESS"] = "술사_영혼이동"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3390,13 +3390,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [8143] = {
         ["id"] = 8143,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_진동",
+            ["SPELL_CAST_SUCCESS"] = "술사_진동"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3404,13 +3404,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [79206] = {
         ["id"] = 79206,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_영혼나그네",
+            ["SPELL_CAST_SUCCESS"] = "술사_영혼나그네"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3418,13 +3418,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [192058] = {
         ["id"] = 192058,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_축전",
+            ["SPELL_CAST_SUCCESS"] = "술사_축전"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3432,13 +3432,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [192077] = {
         ["id"] = 192077,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_바질토",
+            ["SPELL_CAST_SUCCESS"] = "술사_바질토"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3446,13 +3446,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [51485] = {
         ["id"] = 51485,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_구속토",
+            ["SPELL_CAST_SUCCESS"] = "술사_구속토"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3460,13 +3460,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [58875] = {
         ["id"] = 58875,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_정령걸음",
+            ["SPELL_CAST_SUCCESS"] = "술사_정령걸음"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3474,13 +3474,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [192063] = {
         ["id"] = 192063,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_돌풍",
+            ["SPELL_CAST_SUCCESS"] = "술사_돌풍"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3488,13 +3488,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [305483] = {
         ["id"] = 305483,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_번올",
+            ["SPELL_CAST_SUCCESS"] = "술사_번올"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3502,13 +3502,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [383017] = {
         ["id"] = 383017,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_돌가죽",
+            ["SPELL_CAST_SUCCESS"] = "술사_돌가죽"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3516,13 +3516,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [204331] = {
         ["id"] = 204331,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_반격토",
+            ["SPELL_CAST_SUCCESS"] = "술사_반격토"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3530,13 +3530,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [204336] = {
         ["id"] = 204336,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_마흡",
+            ["SPELL_CAST_SUCCESS"] = "술사_마흡"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3544,13 +3544,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [204330] = {
         ["id"] = 204330,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_하늘격노",
+            ["SPELL_CAST_SUCCESS"] = "술사_하늘격노"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3558,13 +3558,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [355580] = {
         ["id"] = 355580,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_전자기장",
+            ["SPELL_CAST_SUCCESS"] = "술사_전자기장"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3572,13 +3572,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [356736] = {
         ["id"] = 356736,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_방출",
+            ["SPELL_CAST_SUCCESS"] = "술사_방출"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3586,13 +3586,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [114050] = {
         ["id"] = 114050,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_승천",
+            ["SPELL_CAST_SUCCESS"] = "술사_승천"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3600,13 +3600,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [428332] = {
         ["id"] = 428332,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_태고",
+            ["SPELL_CAST_SUCCESS"] = "술사_태고"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3614,14 +3614,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 술사(정기)
     [383009] = {
         ["id"] = 383009,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_폭수자",
+            ["SPELL_CAST_SUCCESS"] = "술사_폭수자"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3629,13 +3629,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [191634] = {
         ["id"] = 191634,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_폭수자",
+            ["SPELL_CAST_SUCCESS"] = "술사_폭수자"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3643,13 +3643,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [198067] = {
         ["id"] = 198067,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_불정",
+            ["SPELL_CAST_SUCCESS"] = "술사_불정"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3657,13 +3657,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [192249] = {
         ["id"] = 192249,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_폭정",
+            ["SPELL_CAST_SUCCESS"] = "술사_폭정"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3671,14 +3671,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 술사(고양)
     [51533] = {
         ["id"] = 51533,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_야수정령",
+            ["SPELL_CAST_SUCCESS"] = "술사_야수정령"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3686,13 +3686,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [197214] = {
         ["id"] = 197214,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_세계분리",
+            ["SPELL_CAST_SUCCESS"] = "술사_세계분리"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3700,13 +3700,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [384352] = {
         ["id"] = 384352,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_파바",
+            ["SPELL_CAST_SUCCESS"] = "술사_파바"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3714,13 +3714,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [196884] = {
         ["id"] = 196884,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_약진",
+            ["SPELL_CAST_SUCCESS"] = "술사_약진"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3728,13 +3728,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [2825] = {
         ["id"] = 2825,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_블러드",
+            ["SPELL_CAST_SUCCESS"] = "공용_블러드"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3742,13 +3742,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [193876] = {
         ["id"] = 193876,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_블러드",
+            ["SPELL_CAST_SUCCESS"] = "공용_블러드"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3756,14 +3756,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 술사(복원)
     [16191] = {
         ["id"] = 16191,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_마해토",
+            ["SPELL_CAST_SUCCESS"] = "술사_마해토"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3771,13 +3771,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [98008] = {
         ["id"] = 98008,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_정신고리",
+            ["SPELL_CAST_SUCCESS"] = "술사_정신고리"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3785,13 +3785,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [108280] = {
         ["id"] = 108280,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_치해토",
+            ["SPELL_CAST_SUCCESS"] = "술사_치해토"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3799,13 +3799,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [198838] = {
         ["id"] = 198838,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_대방토",
+            ["SPELL_CAST_SUCCESS"] = "술사_대방토"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3813,13 +3813,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [207399] = {
         ["id"] = 207399,
         ["class"] = "shaman",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "술사_선보토",
+            ["SPELL_CAST_SUCCESS"] = "술사_선보토"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3827,7 +3827,7 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
 
     -- 기사
@@ -3835,7 +3835,7 @@ HHAL.SPELL_LIST = {
         ["id"] = 7328,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_START"] = "공용_부활",
+            ["SPELL_CAST_START"] = "공용_부활"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3843,13 +3843,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [853] = {
         ["id"] = 853,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_심망",
+            ["SPELL_CAST_SUCCESS"] = "기사_심망"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3857,13 +3857,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [20066] = {
         ["id"] = 20066,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_START"] = "기사_참회",
+            ["SPELL_CAST_START"] = "기사_참회"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3871,13 +3871,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [10326] = {
         ["id"] = 10326,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_START"] = "기사_악퇴",
+            ["SPELL_CAST_START"] = "기사_악퇴"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3885,13 +3885,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [115750] = {
         ["id"] = 115750,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_눈뽕",
+            ["SPELL_CAST_SUCCESS"] = "기사_눈뽕"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3899,13 +3899,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [96231] = {
         ["id"] = 96231,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_비난",
+            ["SPELL_CAST_SUCCESS"] = "기사_비난"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3913,13 +3913,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [633] = {
         ["id"] = 633,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_신축",
+            ["SPELL_CAST_SUCCESS"] = "기사_신축"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3927,13 +3927,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [213644] = {
         ["id"] = 213644,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제",
+            ["SPELL_CAST_SUCCESS"] = "공용_해제"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3941,13 +3941,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [4987] = {
         ["id"] = 4987,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제",
+            ["SPELL_CAST_SUCCESS"] = "공용_해제"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3955,13 +3955,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [190784] = {
         ["id"] = 190784,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_군마",
+            ["SPELL_CAST_SUCCESS"] = "기사_군마"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3969,14 +3969,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [1044] = {
         ["id"] = 1044,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "기사_자축",
-            ["SPELL_AURA_REMOVED"] = "기사_자축끝",
+            ["SPELL_AURA_REMOVED"] = "기사_자축끝"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3984,14 +3984,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [6940] = {
         ["id"] = 6940,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "기사_희축",
-            ["SPELL_AURA_REMOVED"] = "기사_희축끝",
+            ["SPELL_AURA_REMOVED"] = "기사_희축끝"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -3999,14 +3999,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [642] = {
         ["id"] = 642,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "기사_무적",
-            ["SPELL_AURA_REMOVED"] = "기사_무적끝",
+            ["SPELL_AURA_REMOVED"] = "기사_무적끝"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4014,14 +4014,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [1022] = {
         ["id"] = 1022,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "기사_보축",
-            ["SPELL_AURA_REMOVED"] = "기사_보축끝",
+            ["SPELL_AURA_REMOVED"] = "기사_보축끝"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4029,13 +4029,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [31884] = {
         ["id"] = 31884,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_날개",
+            ["SPELL_CAST_SUCCESS"] = "기사_날개"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4043,13 +4043,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [231895] = {
         ["id"] = 231895,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_날개",
+            ["SPELL_CAST_SUCCESS"] = "기사_날개"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4057,13 +4057,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [105809] = {
         ["id"] = 105809,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_신복",
+            ["SPELL_CAST_SUCCESS"] = "기사_신복"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4071,13 +4071,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [375576] = {
         ["id"] = 375576,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_천종",
+            ["SPELL_CAST_SUCCESS"] = "기사_천종"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4085,14 +4085,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 기사(신성)
     [498] = {
         ["id"] = 498,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_가호",
+            ["SPELL_CAST_SUCCESS"] = "기사_가호"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4100,13 +4100,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [403876] = {
         ["id"] = 403876,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_가호",
+            ["SPELL_CAST_SUCCESS"] = "기사_가호"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4114,13 +4114,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [31821] = {
         ["id"] = 31821,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_오숙",
+            ["SPELL_CAST_SUCCESS"] = "기사_오숙"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4128,13 +4128,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [388007] = {
         ["id"] = 388007,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_여축",
+            ["SPELL_CAST_SUCCESS"] = "기사_여축"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4142,13 +4142,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [216331] = {
         ["id"] = 216331,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_응전사",
+            ["SPELL_CAST_SUCCESS"] = "기사_응전사"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4156,13 +4156,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [200652] = {
         ["id"] = 200652,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_티르해방",
+            ["SPELL_CAST_SUCCESS"] = "기사_티르해방"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4170,14 +4170,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 기사(보호)
     [31935] = {
         ["id"] = 31935,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_응방",
+            ["SPELL_CAST_SUCCESS"] = "기사_응방"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4185,13 +4185,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [31850] = {
         ["id"] = 31850,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_헌수",
+            ["SPELL_CAST_SUCCESS"] = "기사_헌수"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4199,14 +4199,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [204018] = {
         ["id"] = 204018,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "기사_주축",
-            ["SPELL_AURA_REMOVED"] = "기사_주축끝",
+            ["SPELL_AURA_REMOVED"] = "기사_주축끝"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4214,13 +4214,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [389539] = {
         ["id"] = 389539,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_날개",
+            ["SPELL_CAST_SUCCESS"] = "기사_날개"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4228,13 +4228,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [387174] = {
         ["id"] = 387174,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_티르의눈",
+            ["SPELL_CAST_SUCCESS"] = "기사_티르의눈"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4242,13 +4242,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [228049] = {
         ["id"] = 228049,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_발키리",
+            ["SPELL_CAST_SUCCESS"] = "기사_발키리"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4256,13 +4256,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [86659] = {
         ["id"] = 86659,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_고대왕",
+            ["SPELL_CAST_SUCCESS"] = "기사_고대왕"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4270,13 +4270,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [378974] = {
         ["id"] = 378974,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_빛의수호",
+            ["SPELL_CAST_SUCCESS"] = "기사_빛의수호"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4284,13 +4284,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [215652] = {
         ["id"] = 215652,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_고방",
+            ["SPELL_CAST_SUCCESS"] = "기사_고방"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4298,14 +4298,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 기사(징벌)
     [184662] = {
         ["id"] = 184662,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_복방",
+            ["SPELL_CAST_SUCCESS"] = "기사_복방"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4313,13 +4313,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [343527] = {
         ["id"] = 343527,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_사형선고",
+            ["SPELL_CAST_SUCCESS"] = "기사_사형선고"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4327,13 +4327,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [205191] = {
         ["id"] = 205191,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_눈눈",
+            ["SPELL_CAST_SUCCESS"] = "기사_눈눈"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4341,13 +4341,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [343721] = {
         ["id"] = 343721,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_최집",
+            ["SPELL_CAST_SUCCESS"] = "기사_최집"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4355,13 +4355,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [210256] = {
         ["id"] = 210256,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_성축",
+            ["SPELL_CAST_SUCCESS"] = "기사_성축"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4369,13 +4369,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [383185] = {
         ["id"] = 383185,
         ["class"] = "paladin",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기사_퇴마술",
+            ["SPELL_CAST_SUCCESS"] = "기사_퇴마술"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4383,7 +4383,7 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
 
     -- 드루
@@ -4391,7 +4391,7 @@ HHAL.SPELL_LIST = {
         ["id"] = 50769,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_START"] = "공용_부활",
+            ["SPELL_CAST_START"] = "공용_부활"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4399,13 +4399,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [5211] = {
         ["id"] = 5211,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_강타",
+            ["SPELL_CAST_SUCCESS"] = "드루_강타"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4413,13 +4413,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [99] = {
         ["id"] = 99,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_행포",
+            ["SPELL_CAST_SUCCESS"] = "드루_행포"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4427,13 +4427,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [22570] = {
         ["id"] = 22570,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_무력화",
+            ["SPELL_CAST_SUCCESS"] = "드루_무력화"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4441,13 +4441,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [106839] = {
         ["id"] = 106839,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_두강",
+            ["SPELL_CAST_SUCCESS"] = "드루_두강"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4455,13 +4455,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [102401] = {
         ["id"] = 102401,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_야돌",
+            ["SPELL_CAST_SUCCESS"] = "드루_야돌"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4469,13 +4469,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [252216] = {
         ["id"] = 252216,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_범질",
+            ["SPELL_CAST_SUCCESS"] = "드루_범질"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4483,13 +4483,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [132469] = {
         ["id"] = 132469,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_태풍",
+            ["SPELL_CAST_SUCCESS"] = "드루_태풍"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4497,13 +4497,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [33786] = {
         ["id"] = 33786,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_START"] = "드루_회바",
+            ["SPELL_CAST_START"] = "드루_회바"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4511,13 +4511,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [339] = {
         ["id"] = 339,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_START"] = "드루_뿌묶",
+            ["SPELL_CAST_START"] = "드루_뿌묶"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4525,13 +4525,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [102359] = {
         ["id"] = 102359,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_대뿌묶",
+            ["SPELL_CAST_SUCCESS"] = "드루_대뿌묶"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4539,13 +4539,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [102793] = {
         ["id"] = 102793,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_우르솔",
+            ["SPELL_CAST_SUCCESS"] = "드루_우르솔"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4553,13 +4553,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [5215] = {
         ["id"] = 5215,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_숨기",
+            ["SPELL_CAST_SUCCESS"] = "드루_숨기"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4567,13 +4567,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [1850] = {
         ["id"] = 1850,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_질주",
+            ["SPELL_CAST_SUCCESS"] = "드루_질주"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4581,13 +4581,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [106898] = {
         ["id"] = 106898,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_쇄포",
+            ["SPELL_CAST_SUCCESS"] = "드루_쇄포"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4595,13 +4595,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [319454] = {
         ["id"] = 319454,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_야생정수",
+            ["SPELL_CAST_SUCCESS"] = "드루_야생정수"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4609,13 +4609,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [29166] = {
         ["id"] = 29166,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_자극",
+            ["SPELL_CAST_SUCCESS"] = "드루_자극"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4623,13 +4623,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [22812] = {
         ["id"] = 22812,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_나껍",
+            ["SPELL_CAST_SUCCESS"] = "드루_나껍"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4637,13 +4637,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [22842] = {
         ["id"] = 22842,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_광재",
+            ["SPELL_CAST_SUCCESS"] = "드루_광재"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4651,13 +4651,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [2782] = {
         ["id"] = 2782,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제",
+            ["SPELL_CAST_SUCCESS"] = "공용_해제"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4665,13 +4665,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [88423] = {
         ["id"] = 88423,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제",
+            ["SPELL_CAST_SUCCESS"] = "공용_해제"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4679,13 +4679,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [108238] = {
         ["id"] = 108238,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_소생",
+            ["SPELL_CAST_SUCCESS"] = "드루_소생"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4693,13 +4693,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [305497] = {
         ["id"] = 305497,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_가시",
+            ["SPELL_CAST_SUCCESS"] = "드루_가시"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4707,13 +4707,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [391528] = {
         ["id"] = 391528,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_영혼소집",
+            ["SPELL_CAST_SUCCESS"] = "드루_영혼소집"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4721,14 +4721,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 드루(조화)
     [78675] = {
         ["id"] = 78675,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_태광",
+            ["SPELL_CAST_SUCCESS"] = "드루_태광"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4736,13 +4736,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [202770] = {
         ["id"] = 202770,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_엘분",
+            ["SPELL_CAST_SUCCESS"] = "드루_엘분"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4750,13 +4750,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [194223] = {
         ["id"] = 194223,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_화신",
+            ["SPELL_CAST_SUCCESS"] = "드루_화신"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4764,13 +4764,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [102560] = {
         ["id"] = 102560,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_화신",
+            ["SPELL_CAST_SUCCESS"] = "드루_화신"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4778,13 +4778,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [209749] = {
         ["id"] = 209749,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_요정떼",
+            ["SPELL_CAST_SUCCESS"] = "드루_요정떼"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4792,14 +4792,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 드루(야성)
     [50334] = {
         ["id"] = 50334,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_광폭화",
+            ["SPELL_CAST_SUCCESS"] = "드루_광폭화"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4807,13 +4807,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [102543] = {
         ["id"] = 102543,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_화신",
+            ["SPELL_CAST_SUCCESS"] = "드루_화신"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4821,13 +4821,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [61336] = {
         ["id"] = 61336,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_생본",
+            ["SPELL_CAST_SUCCESS"] = "드루_생본"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4835,13 +4835,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [390772] = {
         ["id"] = 390772,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_암습",
+            ["SPELL_CAST_SUCCESS"] = "드루_암습"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4849,13 +4849,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [274837] = {
         ["id"] = 274837,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_야광",
+            ["SPELL_CAST_SUCCESS"] = "드루_야광"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4863,14 +4863,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 드루(수호)
     [102558] = {
         ["id"] = 102558,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_화신",
+            ["SPELL_CAST_SUCCESS"] = "드루_화신"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4878,13 +4878,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [200851] = {
         ["id"] = 200851,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_잠자는자",
+            ["SPELL_CAST_SUCCESS"] = "드루_잠자는자"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4892,13 +4892,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [80313] = {
         ["id"] = 80313,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_파쇄",
+            ["SPELL_CAST_SUCCESS"] = "드루_파쇄"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4906,13 +4906,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [202246] = {
         ["id"] = 202246,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_약진",
+            ["SPELL_CAST_SUCCESS"] = "드루_약진"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4920,14 +4920,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     -- 드루(회복)
     [102342] = {
         ["id"] = 102342,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_무껍",
+            ["SPELL_CAST_SUCCESS"] = "드루_무껍"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4935,13 +4935,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [132158] = {
         ["id"] = 132158,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_신속",
+            ["SPELL_CAST_SUCCESS"] = "드루_신속"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4949,14 +4949,14 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [353114] = {
         ["id"] = 353114,
         ["class"] = "druid",
         ["voiceFilePath"] = {
             ["SPELL_AURA_APPLIED"] = "드루_평온",
-            ["SPELL_AURA_REMOVED"] = "드루_평온",
+            ["SPELL_AURA_REMOVED"] = "드루_평온"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4964,13 +4964,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [102351] = {
         ["id"] = 102351,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_세나리온",
+            ["SPELL_CAST_SUCCESS"] = "드루_세나리온"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4978,13 +4978,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [203651] = {
         ["id"] = 203651,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_과성장",
+            ["SPELL_CAST_SUCCESS"] = "드루_과성장"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -4992,13 +4992,13 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
     [197721] = {
         ["id"] = 197721,
         ["class"] = "druid",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "드루_번성",
+            ["SPELL_CAST_SUCCESS"] = "드루_번성"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5006,15 +5006,16 @@ HHAL.SPELL_LIST = {
             ["Raid"] = true,
             ["Arena"] = true,
             ["Battleground"] = true
-        },
+        }
     },
 
-    -- DeathKnight
-    [114556] = {
-        ["id"] = 114556,
+    -- 죽기
+    [48707] = {
+        ["id"] = 48707,
         ["class"] = "deathKnight",
         ["voiceFilePath"] = {
-            ["SPELL_AURA_APPLIED"] = "죽기_연옥"
+            ["SPELL_CAST_SUCCESS"] = "죽기_대마보",
+            ["SPELL_AURA_REMOVED"] = "죽기_대마보끝"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5038,11 +5039,11 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [48707] = {
-        ["id"] = 48707,
+    [207167] = {
+        ["id"] = 207167,
         ["class"] = "deathKnight",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "죽기_대마보"
+            ["SPELL_CAST_SUCCESS"] = "죽기_진눈깨비"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5052,11 +5053,11 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [207167] = {
-        ["id"] = 207167,
+    [327574] = {
+        ["id"] = 327574,
         ["class"] = "deathKnight",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "죽기_진눈깨비"
+            ["SPELL_CAST_SUCCESS"] = "죽기_구울먹기"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5098,7 +5099,8 @@ HHAL.SPELL_LIST = {
         ["id"] = 48792,
         ["class"] = "deathKnight",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "죽기_얼인"
+            ["SPELL_CAST_SUCCESS"] = "죽기_얼인",
+            ["SPELL_AURA_REMOVED"] = "죽기_얼인끝"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5113,6 +5115,34 @@ HHAL.SPELL_LIST = {
         ["class"] = "deathKnight",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "죽기_대마지"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [49039] = {
+        ["id"] = 49039,
+        ["class"] = "deathKnight",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "죽기_리혼"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [48743] = {
+        ["id"] = 48743,
+        ["class"] = "deathKnight",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "죽기_죽서"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5178,11 +5208,82 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
+    [47476] = {
+        ["id"] = 47476,
+        ["class"] = "deathKnight",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "죽기_질식"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [77606] = {
+        ["id"] = 77606,
+        ["class"] = "deathKnight",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "죽기_어복"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    -- 죽기(부정)
     [63560] = {
         ["id"] = 63560,
         ["class"] = "deathKnight",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "죽기_구울변신"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [47481] = {
+        ["id"] = 47481,
+        ["class"] = "deathKnight",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "죽기_물어뜯기"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [91802] = {
+        ["id"] = 91802,
+        ["class"] = "deathKnight",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "죽기_구울차단"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [288853] = {
+        ["id"] = 288853,
+        ["class"] = "deathKnight",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "죽기_누더기"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5248,6 +5349,7 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
+    -- 죽기(냉기)
     [51271] = {
         ["id"] = 51271,
         ["class"] = "deathKnight",
@@ -5304,11 +5406,12 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
+    -- 죽기(혈기)
     [49028] = {
         ["id"] = 49028,
         ["class"] = "deathKnight",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "죽기_룬무기"
+            ["SPELL_CAST_SUCCESS"] = "죽기_춤룬"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5346,11 +5449,25 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [81256] = {
-        ["id"] = 81256,
+    [114556] = {
+        ["id"] = 114556,
         ["class"] = "deathKnight",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "죽기_춤룬"
+            ["SPELL_AURA_APPLIED"] = "죽기_연옥"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [203173] = {
+        ["id"] = 203173,
+        ["class"] = "deathKnight",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "죽기_죽음사슬"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5361,54 +5478,12 @@ HHAL.SPELL_LIST = {
         }
     },
 
-    -- Monk
+    -- 수도사
     [115178] = {
         ["id"] = 115178,
         ["class"] = "monk",
         ["voiceFilePath"] = {
             ["SPELL_CAST_START"] = "공용_부활"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [116705] = {
-        ["id"] = 116705,
-        ["class"] = "monk",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "수도사_손날"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [115450] = {
-        ["id"] = 115450,
-        ["class"] = "monk",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [218164] = {
-        ["id"] = 218164,
-        ["class"] = "monk",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5460,11 +5535,151 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
+    [115203] = {
+        ["id"] = 115203,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_강화주"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [115450] = {
+        ["id"] = 115450,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "공용_해제"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [218164] = {
+        ["id"] = 218164,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "공용_해제"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [116705] = {
+        ["id"] = 116705,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_손날"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [101643] = {
+        ["id"] = 101643,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_해탈소환"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [119996] = {
+        ["id"] = 119996,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_해탈"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [109132] = {
+        ["id"] = 109132,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_구르기"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [115008] = {
+        ["id"] = 115008,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_구르기"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
     [116844] = {
         ["id"] = 116844,
         ["class"] = "monk",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "수도사_평고"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [122783] = {
+        ["id"] = 122783,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_마해"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [122278] = {
+        ["id"] = 122278,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_해악감퇴"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5488,11 +5703,124 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
+    [388686] = {
+        ["id"] = 388686,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_백호조각상"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [202370] = {
+        ["id"] = 202370,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_황소발차기"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [233759] = {
+        ["id"] = 233759,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "공용_장분"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    -- 수도사(풍운)
+    [113656] = {
+        ["id"] = 113656,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_분주"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [392983] = {
+        ["id"] = 392983,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_바람군주"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
     [122470] = {
         ["id"] = 122470,
         ["class"] = "monk",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "수도사_업보"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [101545] = {
+        ["id"] = 101545,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_비룡차기"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [137639] = {
+        ["id"] = 137639,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_폭대불"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [152173] = {
+        ["id"] = 152173,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_평안"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5516,8 +5844,37 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
+    [247483] = {
+        ["id"] = 247483,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_호안주"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    -- 수도사(운무)
     [115310] = {
         ["id"] = 115310,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_재활"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [388615] = {
+        ["id"] = 388615,
         ["class"] = "monk",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "수도사_재활"
@@ -5544,11 +5901,152 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [122783] = {
-        ["id"] = 122783,
+    [322118] = {
+        ["id"] = 322118,
         ["class"] = "monk",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "수도사_마해"
+            ["SPELL_CAST_SUCCESS"] = "수도사_위론소환"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [325197] = {
+        ["id"] = 325197,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_주학소환"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [198898] = {
+        ["id"] = 198898,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_START"] = "수도사_츠지"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [209584] = {
+        ["id"] = 209584,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_집중차"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    -- 수도사(양조)
+    [324312] = {
+        ["id"] = 324312,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_충돌"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [202335] = {
+        ["id"] = 202335,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_맥주통"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [354540] = {
+        ["id"] = 354540,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_민활주"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [202162] = {
+        ["id"] = 202162,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_해악방지"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [325153] = {
+        ["id"] = 325153,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_폭발통"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [132578] = {
+        ["id"] = 132578,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_흑우소환"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [387184] = {
+        ["id"] = 387184,
+        ["class"] = "monk",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "수도사_질서무기"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5559,7 +6057,7 @@ HHAL.SPELL_LIST = {
         }
     },
 
-    -- DemonHunter
+    -- 악사
     [183752] = {
         ["id"] = 183752,
         ["class"] = "demonHunter",
@@ -5602,6 +6100,20 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
+    [207684] = {
+        ["id"] = 207684,
+        ["class"] = "demonHunter",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "악사_공포인장"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
     [179057] = {
         ["id"] = 179057,
         ["class"] = "demonHunter",
@@ -5634,7 +6146,7 @@ HHAL.SPELL_LIST = {
         ["id"] = 370965,
         ["class"] = "demonHunter",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "악사_사냥"
+            ["SPELL_CAST_START"] = "악사_사냥"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5644,8 +6156,23 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [200166] = {
-        ["id"] = 200166,
+    [390163] = {
+        ["id"] = 390163,
+        ["class"] = "demonHunter",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "악사_하늘칙령"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    -- 악사(파멸)
+    [191427] = {
+        ["id"] = 191427,
         ["class"] = "demonHunter",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "악사_탈태"
@@ -5658,11 +6185,25 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [187827] = {
-        ["id"] = 187827,
+    [206803] = {
+        ["id"] = 206803,
         ["class"] = "demonHunter",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "악사_탈태"
+            ["SPELL_CAST_SUCCESS"] = "악사_하늘비"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [205604] = {
+        ["id"] = 205604,
+        ["class"] = "demonHunter",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "악사_마역"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5686,11 +6227,12 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [212084] = {
-        ["id"] = 212084,
+    [196555] = {
+        ["id"] = 196555,
         ["class"] = "demonHunter",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "악사_지옥황폐"
+            ["SPELL_CAST_SUCCESS"] = "악사_황천걸음",
+            ["SPELL_AURA_REMOVED"] = "악사_황천걸음"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5714,11 +6256,26 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [390163] = {
-        ["id"] = 390163,
+    -- 악사(복수)
+    [212084] = {
+        ["id"] = 212084,
         ["class"] = "demonHunter",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "악사_하늘칙령"
+            ["SPELL_CAST_SUCCESS"] = "악사_지옥황폐"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [187827] = {
+        ["id"] = 187827,
+        ["class"] = "demonHunter",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "악사_탈태"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5756,37 +6313,8 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [207684] = {
-        ["id"] = 207684,
-        ["class"] = "demonHunter",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "악사_공포인장"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [196555] = {
-        ["id"] = 196555,
-        ["class"] = "demonHunter",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "악사_황천걸음",
-            ["SPELL_AURA_REMOVED"] = "악사_황천걸음끝"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
 
-    -- Evoker
+    -- 기원사
     [361227] = {
         ["id"] = 361227,
         ["class"] = "evoker",
@@ -5802,72 +6330,12 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [360806] = {
-        ["id"] = 360806,
+    [357214] = {
+        ["id"] = 357214,
         ["class"] = "evoker",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_START"] = "기원사_몽유병",
-            ["SPELL_EMPOWER_START"] = "기원사_몽유병"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [351338] = {
-        ["id"] = 351338,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기원사_진압",
-            ["SPELL_EMPOWER_START"] = "기원사_진압"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [365585] = {
-        ["id"] = 365585,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제",
-            ["SPELL_EMPOWER_START"] = "공용_해제"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [374251] = {
-        ["id"] = 374251,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_해제",
-            ["SPELL_EMPOWER_START"] = "공용_해제"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [390386] = {
-        ["id"] = 390386,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "공용_블러드",
-            ["SPELL_EMPOWER_START"] = "공용_블러드"
+            ["SPELL_CAST_SUCCESS"] = "기원사_폭풍날개",
+            ["SPELL_EMPOWER_START"] = "기원사_폭풍날개"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5892,12 +6360,12 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [359816] = {
-        ["id"] = 359816,
+    [408092] = {
+        ["id"] = 408092,
         ["class"] = "evoker",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기원사_꿈의비행",
-            ["SPELL_EMPOWER_START"] = "기원사_꿈의비행"
+            ["SPELL_CAST_SUCCESS"] = "기원사_지각변동",
+            ["SPELL_EMPOWER_START"] = "기원사_지각변동"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5907,12 +6375,344 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [377509] = {
-        ["id"] = 377509,
+    [357210] = {
+        ["id"] = 357210,
         ["class"] = "evoker",
         ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "기원사_꿈의투영",
-            ["SPELL_EMPOWER_START"] = "기원사_꿈의투영"
+            ["SPELL_CAST_SUCCESS"] = "기원사_깊은숨결",
+            ["SPELL_EMPOWER_START"] = "기원사_깊은숨결"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [357208] = {
+        ["id"] = 357208,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_불의숨결",
+            ["SPELL_EMPOWER_START"] = "기원사_불의숨결"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [370553] = {
+        ["id"] = 370553,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_전세역전",
+            ["SPELL_EMPOWER_START"] = "기원사_전세역전"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [365585] = {
+        ["id"] = 365585,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "공용_해제",
+            ["SPELL_EMPOWER_START"] = "공용_해제"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [351338] = {
+        ["id"] = 351338,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_진압",
+            ["SPELL_EMPOWER_START"] = "기원사_진압"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [358385] = {
+        ["id"] = 358385,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_산사태",
+            ["SPELL_EMPOWER_START"] = "기원사_산사태"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [363916] = {
+        ["id"] = 363916,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_흑요석비늘",
+            ["SPELL_EMPOWER_START"] = "기원사_흑요석비늘"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [374251] = {
+        ["id"] = 374251,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "공용_해제",
+            ["SPELL_EMPOWER_START"] = "공용_해제"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [374348] = {
+        ["id"] = 374348,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_소생의불길",
+            ["SPELL_EMPOWER_START"] = "기원사_소생의불길"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [360806] = {
+        ["id"] = 360806,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_START"] = "기원사_몽유병",
+            ["SPELL_EMPOWER_START"] = "기원사_몽유병"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [372048] = {
+        ["id"] = 372048,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_탄압의포효",
+            ["SPELL_EMPOWER_START"] = "기원사_탄압의포효"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [374227] = {
+        ["id"] = 374227,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_미풍",
+            ["SPELL_EMPOWER_START"] = "기원사_미풍"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [378464] = {
+        ["id"] = 378464,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_무효화장막",
+            ["SPELL_EMPOWER_START"] = "기원사_무효화장막"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [383005] = {
+        ["id"] = 383005,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_시간의굴레",
+            ["SPELL_EMPOWER_START"] = "기원사_시간의굴레"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [370388] = {
+        ["id"] = 370388,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_급속상승",
+            ["SPELL_EMPOWER_START"] = "기원사_급속상승"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [390386] = {
+        ["id"] = 390386,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "공용_블러드",
+            ["SPELL_EMPOWER_START"] = "공용_블러드"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    -- 기원사(황폐)
+    [375087] = {
+        ["id"] = 375087,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_용의분노",
+            ["SPELL_EMPOWER_START"] = "기원사_용의분노"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [359073] = {
+        ["id"] = 359073,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_영원쇄도",
+            ["SPELL_EMPOWER_START"] = "기원사_영원쇄도"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    -- 기원사(보존)
+    [382614] = {
+        ["id"] = 382614,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_꿈의숨결",
+            ["SPELL_EMPOWER_START"] = "기원사_꿈의숨결"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [367226] = {
+        ["id"] = 367226,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_영혼만개",
+            ["SPELL_EMPOWER_START"] = "기원사_영혼만개"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [370960] = {
+        ["id"] = 370960,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_에메랄드",
+            ["SPELL_AURA_REMOVED"] = "기원사_에메랄드"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [357170] = {
+        ["id"] = 357170,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_시간팽창",
+            ["SPELL_EMPOWER_START"] = "기원사_시간팽창"
+        },
+        ["enabled"] = {
+            ["Field"] = true,
+            ["Dungeon"] = true,
+            ["Raid"] = true,
+            ["Arena"] = true,
+            ["Battleground"] = true
+        }
+    },
+    [378441] = {
+        ["id"] = 378441,
+        ["class"] = "evoker",
+        ["voiceFilePath"] = {
+            ["SPELL_CAST_SUCCESS"] = "기원사_시간정지",
+            ["SPELL_EMPOWER_START"] = "기원사_시간정지"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -5937,87 +6737,12 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [374227] = {
-        ["id"] = 374227,
+    [359816] = {
+        ["id"] = 359816,
         ["class"] = "evoker",
         ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_미풍",
-            ["SPELL_CAST_SUCCESS"] = "기원사_미풍"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [358385] = {
-        ["id"] = 358385,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_산사태",
-            ["SPELL_CAST_SUCCESS"] = "기원사_산사태"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [374968] = {
-        ["id"] = 374968,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_시간의와류",
-            ["SPELL_CAST_SUCCESS"] = "기원사_시간의와류"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [357170] = {
-        ["id"] = 357170,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_시간팽창",
-            ["SPELL_CAST_SUCCESS"] = "기원사_시간팽창"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [370960] = {
-        ["id"] = 370960,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_에메랄드",
-            ["SPELL_CAST_SUCCESS"] = "기원사_에메랄드"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [375087] = {
-        ["id"] = 375087,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_용의분노",
-            ["SPELL_CAST_SUCCESS"] = "기원사_용의분노"
+            ["SPELL_CAST_SUCCESS"] = "기원사_꿈의비행",
+            ["SPELL_EMPOWER_START"] = "기원사_꿈의비행"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -6031,8 +6756,8 @@ HHAL.SPELL_LIST = {
         ["id"] = 370537,
         ["class"] = "evoker",
         ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_정지장",
-            ["SPELL_CAST_SUCCESS"] = "기원사_정지장"
+            ["SPELL_CAST_SUCCESS"] = "기원사_정지장",
+            ["SPELL_EMPOWER_START"] = "기원사_정지장"
         },
         ["enabled"] = {
             ["Field"] = true,
@@ -6042,72 +6767,12 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [372048] = {
-        ["id"] = 372048,
+    [377509] = {
+        ["id"] = 377509,
         ["class"] = "evoker",
         ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_탄압의포효",
-            ["SPELL_CAST_SUCCESS"] = "기원사_탄압의포효"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [357214] = {
-        ["id"] = 357214,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_폭풍날개",
-            ["SPELL_CAST_SUCCESS"] = "기원사_폭풍날개"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [363916] = {
-        ["id"] = 363916,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_흑요석비늘",
-            ["SPELL_CAST_SUCCESS"] = "기원사_흑요석비늘"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [373861] = {
-        ["id"] = 373861,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_시간변칙",
-            ["SPELL_CAST_SUCCESS"] = "기원사_시간변칙"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
-    [408092] = {
-        ["id"] = 408092,
-        ["class"] = "evoker",
-        ["voiceFilePath"] = {
-            ["SPELL_EMPOWER_START"] = "기원사_지각변동",
-            ["SPELL_CAST_SUCCESS"] = "기원사_지각변동"
+            ["SPELL_CAST_SUCCESS"] = "기원사_꿈의투영",
+            ["SPELL_EMPOWER_START"] = "기원사_꿈의투영"
         },
         ["enabled"] = {
             ["Field"] = true,
