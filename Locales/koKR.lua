@@ -39,6 +39,7 @@ LC["Arena"] = "투기장"
 LC["Boss"] = "보스"
 LC["AlliesUnit"] = "아군"
 LC["EnemyUnit"] = "적군"
+LC["TargetUnit"] = "대상"
 
 LC["Everything"] = "모든것"
 LC["Self"] = "자신에게"

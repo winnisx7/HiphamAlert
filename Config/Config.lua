@@ -50,7 +50,7 @@ HHAL.DATABASE_DEFAULTS = {
 		-------------------------------------------------------
 		--	General		
 		-------------------------------------------------------
-		version = "2.4.0",
+		version = "2.5.0",
 
 		minimap = { hide = false, },
 
@@ -82,26 +82,31 @@ HHAL.DATABASE_DEFAULTS = {
 				["Mine"] = true,
 				["AlliesUnit"] = false,
 				["EnemyUnit"] = false,
+				["TargetUnit"] = true,
 			},
 			["Dungeon"] = {
 				["Mine"] = true,
 				["AlliesUnit"] = true,
 				["EnemyUnit"] = false,
+				["TargetUnit"] = false,
 			},
 			["Raid"] = {
 				["Mine"] = true,
 				["AlliesUnit"] = false,
 				["EnemyUnit"] = false,
+				["TargetUnit"] = false,
 			},
 			["Arena"] = {
 				["Mine"] = false,
 				["AlliesUnit"] = false,
 				["EnemyUnit"] = true,
+				["TargetUnit"] = true,
 			},
 			["Battleground"] = {
 				["Mine"] = false,
 				["AlliesUnit"] = false,
 				["EnemyUnit"] = false,
+				["TargetUnit"] = true,
 			},
 		},
 		-------------------------------------------------------
@@ -350,6 +355,17 @@ function HHAL:CreateOptions()
 											return HHDB.spellActivationTarget.Field.EnemyUnit
 										end,
 									},
+									TargetUnit = {
+										type = "toggle",
+										name = LC["TargetUnit"],
+										order = 4,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Field.TargetUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Field.TargetUnit
+										end,
+									},
 								},
 							},
 							Dungeon = {
@@ -388,6 +404,17 @@ function HHAL:CreateOptions()
 										end,
 										get = function(info)
 											return HHDB.spellActivationTarget.Dungeon.EnemyUnit
+										end,
+									},
+									TargetUnit = {
+										type = "toggle",
+										name = LC["TargetUnit"],
+										order = 4,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Dungeon.TargetUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Dungeon.TargetUnit
 										end,
 									},
 								},
@@ -430,6 +457,17 @@ function HHAL:CreateOptions()
 											return HHDB.spellActivationTarget.Raid.EnemyUnit
 										end,
 									},
+									TargetUnit = {
+										type = "toggle",
+										name = LC["TargetUnit"],
+										order = 4,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Raid.TargetUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Raid.TargetUnit
+										end,
+									},
 								},
 							},
 							Arena = {
@@ -470,6 +508,17 @@ function HHAL:CreateOptions()
 											return HHDB.spellActivationTarget.Arena.EnemyUnit
 										end,
 									},
+									TargetUnit = {
+										type = "toggle",
+										name = LC["TargetUnit"],
+										order = 4,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Arena.TargetUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Arena.TargetUnit
+										end,
+									},
 								},
 							},
 							Battleground = {
@@ -508,6 +557,17 @@ function HHAL:CreateOptions()
 										end,
 										get = function(info)
 											return HHDB.spellActivationTarget.Battleground.EnemyUnit
+										end,
+									},
+									TargetUnit = {
+										type = "toggle",
+										name = LC["TargetUnit"],
+										order = 4,
+										set = function(info, newValue)
+											HHDB.spellActivationTarget.Battleground.TargetUnit = newValue
+										end,
+										get = function(info)
+											return HHDB.spellActivationTarget.Battleground.TargetUnit
 										end,
 									},
 								},

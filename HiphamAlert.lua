@@ -13,8 +13,8 @@ function HHAL:OnInitialize()
 end
 
 function HHAL:OnEnable()
-	if HHDB.version ~= "2.4.0" then
-		HHAL.DB:ResetProfile()
+	if HHDB.version ~= "2.5.0" then
+		HHAL.DB.profile = HHAL.DATABASE_DEFAULTS.profile
 	end
 
 	HHDB = HHAL.DB.profile
@@ -118,6 +118,19 @@ function HHAL:VoiceAlert(eventType, sourceGUID, sourceName, sourceFlags, destGUI
 		then
 			HHAL:PlaySound(voiceFilePath)
 			return
+		end
+	end
+	if HHDB.spellActivationTarget[HHAL.currentInstance].TargetUnit then
+		if CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_HOSTILE_PLAYERS)
+		or CombatLog_Object_IsA(sourceFlags, COMBATLOG_FILTER_HOSTILE_UNITS)
+		then
+			local targetUnit = UnitGUID("target")
+			if targetUnit ~= nil then
+				if sourceGUID == targetUnit then
+					HHAL:PlaySound(voiceFilePath)
+					return
+				end
+			end
 		end
 	end
 end
