@@ -6232,7 +6232,7 @@ HHAL.SPELL_LIST = {
         ["class"] = "demonHunter",
         ["voiceFilePath"] = {
             ["SPELL_CAST_SUCCESS"] = "악사_황천걸음",
-            ["SPELL_AURA_REMOVED"] = "악사_황천걸음"
+            ["SPELL_AURA_REMOVED"] = "악사_황천걸음끝"
         },
         ["enabled"] = {
             ["Field"] = true,
