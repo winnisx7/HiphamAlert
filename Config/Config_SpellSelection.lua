@@ -40,13 +40,13 @@ local function activationVoiceAlertSpellOptions(area, class)
 	local args = {}
 	
 	for spellId, value in pairs(spellList) do
-		local spellName, _, spellIcon = GetSpellInfo(spellId)
+		local spell = C_Spell.GetSpellInfo(spellId)
 		local options = {
 			type = "toggle",
-			image = spellIcon,
+			image = spell.iconID,
 			imageCoords = { 0.07, 0.93, 0.07, 0.93 },
-			name = spellName,
-			tooltipHyperlink = GetSpellLink(spellId),
+			name = spell.name,
+			tooltipHyperlink = C_Spell.GetSpellLink(spellId)
 		}
 		args[tostring(spellId)] = options
 	end

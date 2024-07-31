@@ -5816,20 +5816,20 @@ HHAL.SPELL_LIST = {
             ["Battleground"] = true
         }
     },
-    [152173] = {
-        ["id"] = 152173,
-        ["class"] = "monk",
-        ["voiceFilePath"] = {
-            ["SPELL_CAST_SUCCESS"] = "수도사_평안"
-        },
-        ["enabled"] = {
-            ["Field"] = true,
-            ["Dungeon"] = true,
-            ["Raid"] = true,
-            ["Arena"] = true,
-            ["Battleground"] = true
-        }
-    },
+    -- [152173] = {
+    --     ["id"] = 152173,
+    --     ["class"] = "monk",
+    --     ["voiceFilePath"] = {
+    --         ["SPELL_CAST_SUCCESS"] = "수도사_평안"
+    --     },
+    --     ["enabled"] = {
+    --         ["Field"] = true,
+    --         ["Dungeon"] = true,
+    --         ["Raid"] = true,
+    --         ["Arena"] = true,
+    --         ["Battleground"] = true
+    --     }
+    -- },
     [123904] = {
         ["id"] = 123904,
         ["class"] = "monk",
