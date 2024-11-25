@@ -1,16 +1,18 @@
-## Interface: 100200
-## Version: 2.5.0
+## Interface: 110005
+## Version: 3.0.0
 ## Title: HiphamAlert
 ## Notes: HiphamAlert Combat Alert Addon
-## Author: 힙햄
+## Author: 니브다요-아즈샤라(제작), 힙햄-아즈샤라(음성)
 ## SavedVariables: HiphamAlertDB
+## IconTexture: Interface\AddOns\HiphamAlert\Assets\Images\icon_hipham.tga
 
 HiphamAlert.xml
-Locales\locales.xml
 
 HiphamAlert.lua
-
-Asset\Spell\SpellList.lua
-
-Config\Config.lua
-Config\Config_SpellSelection.lua
+Utils\Assets.lua
+Utils\Schemas.lua
+Utils\Utils.lua
+Utils\SpellDB.lua
+Utils\ProfileDB.lua
+Utils\State.lua
+Configs\Configs.lua
