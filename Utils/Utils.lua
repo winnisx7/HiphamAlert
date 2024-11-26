@@ -8,7 +8,7 @@ function Core.Utils.colorText(text, color)
 end
 
 function Core.Utils.debugPrint(...)
-  if Core.DB.profile.debugMode then
+  if Core.DB.global.debugMode then
     print(...)
   end
 end

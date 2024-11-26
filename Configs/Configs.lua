@@ -56,10 +56,10 @@ local function options()
                 name = "사운드 출력 채널",
                 desc = "채널 볼륨 조절",
                 set = function(info, newValue)
-                  Core.DB.profile.soundChannel = newValue
+                  Core.DB.global.soundChannel = newValue
                 end,
                 get = function()
-                  return Core.DB.profile.soundChannel
+                  return Core.DB.global.soundChannel
                 end,
                 values = {
                   ["Master"] = "주 음량",
@@ -78,10 +78,10 @@ local function options()
                 step = 0.01,
                 name = "채널 음량",
                 set = function(info, newValue)
-                  SetCVar("Sound_" .. Core.DB.profile.soundChannel .. "Volume", tostring(newValue))
+                  SetCVar("Sound_" .. Core.DB.global.soundChannel .. "Volume", tostring(newValue))
                 end,
                 get = function()
-                  return tonumber(GetCVar("Sound_" .. Core.DB.profile.soundChannel .. "Volume"))
+                  return tonumber(GetCVar("Sound_" .. Core.DB.global.soundChannel .. "Volume"))
                 end,
                 order = 2
               }

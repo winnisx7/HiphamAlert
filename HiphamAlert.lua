@@ -5,12 +5,11 @@ local Core = LibStub("AceAddon-3.0"):NewAddon("HiphamAlert", "AceEvent-3.0", "Ac
 
 function Core:OnInitialize()
   Core:setupDB()
+  Core:migrationDB()
   Core:setupMinimapIcon()
 end
 
 function Core:OnEnable()
-  Core:setupDB()
-  Core:migrationDB()
   Core:setupConfigs()
   Core:updateMinimapIcon()
   Core:RegisterEvent("PLAYER_ENTERING_WORLD")
@@ -22,7 +21,7 @@ function Core:OnDisable()
 
 end
 
-function Core:ProfileChanged()
+function Core:refreshConfigs()
   Core:migrationDB()
   Core:setupConfigs()
 end
@@ -52,41 +51,33 @@ end
 -- Public function
 
 function Core:setupDB()
-  Core.DB = LibStub("AceDB-3.0"):New("HiphamAlertDB", Core.ProfileDB)
-  Core.DB.RegisterCallback(Core, "OnProfileChanged", "ProfileChanged")
-  Core.DB.RegisterCallback(Core, "OnProfileCopied", "ProfileChanged")
-  Core.DB.RegisterCallback(Core, "OnProfileReset", "ProfileChanged")
+  Core.DB = LibStub("AceDB-3.0"):New("HiphamAlertDB", Core.DefaultDB, true)
+  Core.DB:RegisterDefaults(Core.DefaultDB)
+  Core.DB.RegisterCallback(Core, "OnProfileChanged", "refreshConfigs")
+  Core.DB.RegisterCallback(Core, "OnProfileCopied", "refreshConfigs")
+  Core.DB.RegisterCallback(Core, "OnProfileReset", "refreshConfigs")
 end
 
 function Core:migrationDB()
-  -- 프로필 리셋
-  if Core.DB.profile.version ~= 1 then
-    for key, value in pairs(Core.DB.profile) do
-      Core.DB.profile[key] = nil
-    end
-
-    for key, value in pairs(Core.ProfileDB.profile) do
-      Core.DB.profile[key] = value
-    end
+  -- 프로필 DB 마이그레이션
+  if Core.DB.global.version == nil or Core.DB.global.version < Core.DefaultDB.global.version then
+    Core.DB:ResetDB()
   end
 
-  -- 프로필 마이그레이션
-  if Core.DB.profile.version then
-    local oldSpellDB = Core.DB.profile.spellDB or {}
-    local newSpellDB = {}
-
-    for _, spell in pairs(Core.SpellDB) do
-      newSpellDB[spell.id] = spell
-      newSpellDB[spell.id].enabled = oldSpellDB[spell.id].enabled or {
-        none = true,
-        pvp = true,
-        arena = true,
-        party = true,
-        raid = true,
-      }
-    end
-    Core.DB.profile.spellDB = newSpellDB
+  -- 주문 DB 마이그레이션
+  local oldSpellDB = Core.DB.profile.spellDB
+  local newSpellDB = {}
+  for _, spell in pairs(Core.SpellDB) do
+    newSpellDB[spell.id] = spell
+    newSpellDB[spell.id].enabled = (oldSpellDB and oldSpellDB[spell.id] and oldSpellDB[spell.id].enabled) or {
+      none = true,
+      pvp = true,
+      arena = true,
+      party = true,
+      raid = true,
+    }
   end
+  Core.DB.profile.spellDB = newSpellDB
 end
 
 function Core:setupMinimapIcon()
@@ -102,11 +93,11 @@ function Core:setupMinimapIcon()
       tooltip:AddLine("클릭시 힙햄얼럿 옵션창을 불러옵니다.")
     end
   })
-  LibStub("LibDBIcon-1.0"):Register("HiphamAlert", minimapIcon, Core.DB.profile.minimap)
+  LibStub("LibDBIcon-1.0"):Register("HiphamAlert", minimapIcon, Core.DB.global.minimap)
 end
 
 function Core:updateMinimapIcon()
-  if Core.DB.profile.minimap.hide then
+  if Core.DB.global.minimap.hide then
     LibStub("LibDBIcon-1.0"):Hide("HiphamAlert")
   else
     LibStub("LibDBIcon-1.0"):Show("HiphamAlert")
@@ -201,7 +192,7 @@ function Core:playSpellSound(path)
     return
   end
   Core.Utils.debugPrint("Interface\\Addons\\HiphamAlert\\Assets\\Sounds\\" .. path .. ".mp3")
-  PlaySoundFile("Interface\\Addons\\HiphamAlert\\Assets\\Sounds\\" .. path .. ".mp3", Core.DB.profile.soundChannel)
+  PlaySoundFile("Interface\\Addons\\HiphamAlert\\Assets\\Sounds\\" .. path .. ".mp3", Core.DB.global.soundChannel)
 end
 
 SLASH_HIPHAMCMD1 = "/hipham"
@@ -213,9 +204,9 @@ end
 SLASH_DEBUGCMD1 = "/hiphamdebug"
 SLASH_DEBUGCMD2 = "/힙햄디버그"
 function SlashCmdList.DEBUGCMD(message)
-  Core.DB.profile.debugMode = not Core.DB.profile.debugMode
+  Core.DB.global.debugMode = not Core.DB.global.debugMode
 
-  if Core.DB.profile.debugMode == true then
+  if Core.DB.global.debugMode == true then
     print("힙햄얼럿: " .. Core.Utils.colorText("디버그 모드 켜짐", Core.Assets.color.green))
   else
     print("힙햄얼럿: " .. Core.Utils.colorText("디버그 모드 꺼짐", Core.Assets.color.red))

@@ -1,5 +1,5 @@
 ## Interface: 110005
-## Version: 3.0.0
+## Version: 3.1.0
 ## Title: HiphamAlert
 ## Notes: HiphamAlert Combat Alert Addon
 ## Author: 니브다요-아즈샤라(제작), 힙햄-아즈샤라(음성)
@@ -12,7 +12,7 @@ HiphamAlert.lua
 Utils\Assets.lua
 Utils\Schemas.lua
 Utils\Utils.lua
+Utils\DefaultDB.lua
 Utils\SpellDB.lua
-Utils\ProfileDB.lua
 Utils\State.lua
 Configs\Configs.lua

@@ -1,12 +1,12 @@
 ---@class Core
 local Core = LibStub("AceAddon-3.0"):GetAddon("HiphamAlert")
 
-Core.ProfileDB = {
-  profile = {
+Core.DefaultDB = {
+  global = {
     -------------------------------------------------------
     --	Addon		
     -------------------------------------------------------
-    version = 1,
+    version = 3,
     debugMode = false,
     -------------------------------------------------------
     --	General		
@@ -16,9 +16,11 @@ Core.ProfileDB = {
     },
     soundChannel = "Master",
     -------------------------------------------------------
+  },
+  profile = {
     --	Spell		
     -------------------------------------------------------
-    spellDB = Core.SpellDB,
+    spellDB = {},
     voiceAlertEnabled = true,
     voiceAlertEnabledByInstance = {
       none = true,
