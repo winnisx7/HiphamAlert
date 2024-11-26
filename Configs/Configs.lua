@@ -36,11 +36,11 @@ local function options()
                 name = "미니맵 버튼",
                 order = 1,
                 set = function(info, newValue)
-                  Core.DB.profile.minimap.hide = not newValue
+                  Core.DB.global.minimap.hide = not newValue
                   Core:updateMinimapIcon()
                 end,
                 get = function()
-                  return not Core.DB.profile.minimap.hide
+                  return not Core.DB.global.minimap.hide
                 end
               }
             }
