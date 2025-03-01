@@ -154,13 +154,6 @@ Core.SpellDB = {
       SPELL_CAST_SUCCESS = "전사_투신"
     },
   },
-  [401150] = {
-    id = 401150,
-    category = "warrior",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "전사_투신"
-    },
-  },
   [384318] = {
     id = 384318,
     category = "warrior",

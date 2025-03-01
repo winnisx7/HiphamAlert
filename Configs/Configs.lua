@@ -502,35 +502,70 @@ local function options()
                               local options = {}
                               for key, spell in pairs(spells) do
                                 local spellInfo = C_Spell.GetSpellInfo(spell.id)
-                                options[tostring(spell.id)] = {
-                                  type = "toggle",
-                                  image = spellInfo.iconID,
-                                  imageCoords = { 0.07, 0.93, 0.07, 0.93 },
-                                  name = spellInfo.name,
-                                  tooltipHyperlink = C_Spell.GetSpellLink(spell.id),
-                                  set = function(info, newValue)
-                                    Core.DB.profile.spellDB[spell.id].enabled[instance.id] = newValue
-
-                                    if newValue then
-                                      if Core.DB.profile.spellDB[spell.id].combatLogVoiceMap.SPELL_CAST_SUCCESS then
-                                        Core:playSpellSound(Core.DB.profile.spellDB[spell.id].combatLogVoiceMap
-                                          .SPELL_CAST_SUCCESS)
-                                      elseif Core.DB.profile.spellDB[spell.id].combatLogVoiceMap.SPELL_CAST_START then
-                                        Core:playSpellSound(Core.DB.profile.spellDB[spell.id].combatLogVoiceMap
-                                          .SPELL_CAST_START)
-                                      elseif Core.DB.profile.spellDB[spell.id].combatLogVoiceMap.SPELL_EMPOWER_START then
-                                        Core:playSpellSound(Core.DB.profile.spellDB[spell.id].combatLogVoiceMap
-                                          .SPELL_EMPOWER_START)
-                                      elseif Core.DB.profile.spellDB[spell.id].combatLogVoiceMap.SPELL_AURA_APPLIED then
-                                        Core:playSpellSound(Core.DB.profile.spellDB[spell.id].combatLogVoiceMap
-                                          .SPELL_AURA_APPLIED)
+                              
+                                if spellInfo then  -- nil 체크 명시적으로
+                                  options[tostring(spell.id)] = {
+                                    type = "toggle",
+                                    image = spellInfo.iconID,
+                                    imageCoords = { 0.07, 0.93, 0.07, 0.93 },
+                                    name = spellInfo.name,
+                                    tooltipHyperlink = C_Spell.GetSpellLink(spell.id),
+                                    set = function(info, newValue)
+                                      Core.DB.profile.spellDB[spell.id].enabled[instance.id] = newValue
+                              
+                                      if newValue then
+                                        local voiceMap = Core.DB.profile.spellDB[spell.id].combatLogVoiceMap
+                                        if voiceMap.SPELL_CAST_SUCCESS then
+                                          Core:playSpellSound(voiceMap.SPELL_CAST_SUCCESS)
+                                        elseif voiceMap.SPELL_CAST_START then
+                                          Core:playSpellSound(voiceMap.SPELL_CAST_START)
+                                        elseif voiceMap.SPELL_EMPOWER_START then
+                                          Core:playSpellSound(voiceMap.SPELL_EMPOWER_START)
+                                        elseif voiceMap.SPELL_AURA_APPLIED then
+                                          Core:playSpellSound(voiceMap.SPELL_AURA_APPLIED)
+                                        end
                                       end
+                                    end,
+                                    get = function()
+                                      return Core.DB.profile.spellDB[spell.id].enabled[instance.id]
                                     end
-                                  end,
-                                  get = function()
-                                    return Core.DB.profile.spellDB[spell.id].enabled[instance.id]
+                                  }
+                                else
+                                  for key, spell in pairs(spells) do
+                                    local spellInfo = C_Spell.GetSpellInfo(spell.id)
+                                  
+                                    if spellInfo then  -- nil 체크 명시적으로
+                                      options[tostring(spell.id)] = {
+                                        type = "toggle",
+                                        image = spellInfo.iconID,
+                                        imageCoords = { 0.07, 0.93, 0.07, 0.93 },
+                                        name = spellInfo.name,
+                                        tooltipHyperlink = C_Spell.GetSpellLink(spell.id),
+                                        set = function(info, newValue)
+                                          Core.DB.profile.spellDB[spell.id].enabled[instance.id] = newValue
+                                  
+                                          if newValue then
+                                            local voiceMap = Core.DB.profile.spellDB[spell.id].combatLogVoiceMap
+                                            if voiceMap.SPELL_CAST_SUCCESS then
+                                              Core:playSpellSound(voiceMap.SPELL_CAST_SUCCESS)
+                                            elseif voiceMap.SPELL_CAST_START then
+                                              Core:playSpellSound(voiceMap.SPELL_CAST_START)
+                                            elseif voiceMap.SPELL_EMPOWER_START then
+                                              Core:playSpellSound(voiceMap.SPELL_EMPOWER_START)
+                                            elseif voiceMap.SPELL_AURA_APPLIED then
+                                              Core:playSpellSound(voiceMap.SPELL_AURA_APPLIED)
+                                            end
+                                          end
+                                        end,
+                                        get = function()
+                                          return Core.DB.profile.spellDB[spell.id].enabled[instance.id]
+                                        end
+                                      }
+                                    else
+                                      Core.Utils.debugPrint("spellInfo가 존재하지 않는 spell 발견:", spell)
+                                    end
                                   end
-                                }
+                                end
                               end
                               table.sort(options, function(lhs, rhs)
                                 return lhs.name < rhs.name
