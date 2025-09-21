@@ -1,4 +1,4 @@
-## Interface: 110005
+## Interface: 50500
 ## Version: 3.1.0
 ## Title: HiphamAlert
 ## Notes: HiphamAlert Combat Alert Addon

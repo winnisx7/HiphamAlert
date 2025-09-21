@@ -14,7 +14,7 @@ function Core:OnEnable()
   Core:updateMinimapIcon()
   Core:RegisterEvent("PLAYER_ENTERING_WORLD")
   Core:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-  C_ChatInfo.RegisterAddonMessagePrefix("HiphamAlert")
+  RegisterAddonMessagePrefix("HiphamAlert")
 end
 
 function Core:OnDisable()
@@ -37,7 +37,7 @@ function Core:COMBAT_LOG_EVENT_UNFILTERED(event, ...)
   if sourceGUID == UnitGUID("player") then
     Core.Utils.debugPrint("-------------------------------------------")
     Core.Utils.debugPrint(eventType, spellName, spellId)
-    local name, rank, icon, castTime, minRange, maxRange = C_Spell.GetSpellInfo(spellId)
+    local name, rank, icon, castTime, minRange, maxRange = GetSpellInfo(spellId)
     Core.Utils.debugPrint(castTime)
     local cooldownMS, gcdMS = GetSpellBaseCooldown(spellId)
     Core.Utils.debugPrint(cooldownMS, gcdMS)

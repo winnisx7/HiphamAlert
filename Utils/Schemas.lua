@@ -98,18 +98,6 @@ Core.Schemas.classes = {
 		color = "00FF97",
 		order = 11
 	},
-	demonHunter = {
-		id = "demonHunter",
-		descKr = "악마사냥꾼",
-		color = "A330C9",
-		order = 12
-	},
-	evoker = {
-		id = "evoker",
-		descKr = "기원사",
-		color = "33937F",
-		order = 13
-	},
 }
 
 Core.Schemas.spellCategories = {
@@ -185,18 +173,6 @@ Core.Schemas.spellCategories = {
 		color = "00FF97",
 		order = 12
 	},
-	demonHunter = {
-		id = "demonHunter",
-		descKr = "악마사냥꾼",
-		color = "A330C9",
-		order = 13
-	},
-	evoker = {
-		id = "evoker",
-		descKr = "기원사",
-		color = "33937F",
-		order = 14
-	},
 }
 
 Core.Schemas.combatlogSpellEventTypes = {
@@ -204,6 +180,4 @@ Core.Schemas.combatlogSpellEventTypes = {
 	"SPELL_CAST_SUCCESS",
 	"SPELL_AURA_APPLIED",
 	"SPELL_AURA_REMOVED",
-	"SPELL_EMPOWER_START",
-	"SPELL_EMPOWER_END",
 }
