@@ -82,6 +82,13 @@ Core.SpellDB = {
       SPELL_CAST_SUCCESS = "전사_주반"
     },
   },
+  [114028] = {
+    id = 114028,
+    category = "warrior",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "전사_대규모주문반사"
+    },
+  },
   [18499] = {
     id = 18499,
     category = "warrior",
@@ -365,8 +372,8 @@ Core.SpellDB = {
       SPELL_CAST_SUCCESS = "도적_후려"
     },
   },
-  [207777] = {
-    id = 207777,
+  [51722] = {
+    id = 51722,
     category = "rogue",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "공용_장분"
@@ -379,8 +386,8 @@ Core.SpellDB = {
       SPELL_CAST_SUCCESS = "도적_발차기"
     },
   },
-  [394929] = {
-    id = 394929,
+  [51713] = {
+    id = 51713,
     category = "rogue",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "도적_어춤"
@@ -422,12 +429,26 @@ Core.SpellDB = {
       SPELL_CAST_SUCCESS = "도적_소멸"
     },
   },
+  [36554] = {
+    id = 36554,
+    category = "rogue",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "도적_그밟"
+    },
+  },
   [31224] = {
     id = 31224,
     category = "rogue",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "도적_그망",
       SPELL_AURA_REMOVED = "도적_그망끝"
+    },
+  },
+  [74001] = {
+    id = 74001,
+    category = "rogue",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "도적_전투준비"
     },
   },
   [31230] = {
@@ -451,22 +472,22 @@ Core.SpellDB = {
       SPELL_CAST_SUCCESS = "도적_피고름"
     },
   },
-  [359053] = {
-    id = 359053,
+  [76577] = {
+    id = 76577,
     category = "rogue",
     combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "도적_연막탄"
+      SPELL_CAST_SUCCESS = "도적_연막"
     },
   },
   [212182] = {
     id = 212182,
     category = "rogue",
     combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "도적_연막탄"
+      SPELL_CAST_SUCCESS = "도적_연막"
     },
   },
-  [221630] = {
-    id = 221630,
+  [57934] = {
+    id = 57934,
     category = "rogue",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "도적_속거"
@@ -500,6 +521,27 @@ Core.SpellDB = {
     category = "rogue",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "도적_아드레날린"
+    },
+  },
+  [51690] = {
+    id = 51690,
+    category = "rogue",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "도적_광학"
+    },
+  },
+  [79140] = {
+    id = 79140,
+    category = "rogue",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "도적_원한"
+    },
+  },
+  [14185] = {
+    id = 14185,
+    category = "rogue",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "도적_맘가"
     },
   },
   [343142] = {
@@ -568,11 +610,18 @@ Core.SpellDB = {
       SPELL_CAST_SUCCESS = "냥꾼_재갈"
     },
   },
-  [213691] = {
-    id = 213691,
+  [19503] = {
+    id = 19503,
     category = "hunter",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "냥꾼_산탄"
+    },
+  },
+  [3045] = {
+    id = 3045,
+    category = "hunter",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "냥꾼_속사"
     },
   },
   [109248] = {
@@ -601,6 +650,28 @@ Core.SpellDB = {
     category = "hunter",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "냥꾼_올가미"
+    },
+  },
+  [1499] = {
+    id = 1499,
+    category = "hunter",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "냥꾼_빙덫"
+    },
+  },
+  [90337] = {
+    id = 90337,
+    category = "hunter",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "냥꾼_버손"
+    },
+  },
+  [19263] = {
+    id = 19263,
+    category = "hunter",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "냥꾼_공격저지",
+      SPELL_AURA_REMOVED = "냥꾼_공격저지끝"
     },
   },
   [199483] = {
@@ -840,6 +911,13 @@ Core.SpellDB = {
       SPELL_CAST_START = "법사_변이"
     },
   },
+  [44572] = {
+    id = 44572,
+    category = "mage",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "법사_동결"
+    },
+  },
   [383121] = {
     id = 383121,
     category = "mage",
@@ -903,8 +981,8 @@ Core.SpellDB = {
       SPELL_CAST_SUCCESS = "공용_해제"
     },
   },
-  [342246] = {
-    id = 342246,
+  [110909] = {
+    id = 110909,
     category = "mage",
     combatLogVoiceMap = {
       SPELL_AURA_APPLIED = "법사_시돌",
@@ -916,6 +994,13 @@ Core.SpellDB = {
     category = "mage",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "법사_유성"
+    },
+  },
+  [12043] = {
+    id = 12043,
+    category = "mage",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "법사_냉정"
     },
   },
   [55342] = {
@@ -1025,8 +1110,8 @@ Core.SpellDB = {
       SPELL_AURA_APPLIED = "법사_얼형"
     },
   },
-  [235219] = {
-    id = 235219,
+  [11958] = {
+    id = 11958,
     category = "mage",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "법사_한파"
@@ -1106,6 +1191,34 @@ Core.SpellDB = {
   },
 
   -- 흑마
+  [113858] = {
+    id = 113858,
+    category = "warlock",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "흑마_악마의영혼"
+    },
+  },
+  [113860] = {
+    id = 113860,
+    category = "warlock",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "흑마_악마의영혼"
+    },
+  },
+  [113861] = {
+    id = 113861,
+    category = "warlock",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "흑마_악마의영혼"
+    },
+  },
+  [110913] = {
+    id = 110913,
+    category = "warlock",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "흑마_어둠의거래"
+    },
+  },
   [410598] = {
     id = 410598,
     category = "warlock",
@@ -1994,6 +2107,13 @@ Core.SpellDB = {
       SPELL_CAST_SUCCESS = "기사_심망"
     },
   },
+  [105593] = {
+    id = 105593,
+    category = "paladin",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "기사_심판의주먹"
+    },
+  },
   [20066] = {
     id = 20066,
     category = "paladin",
@@ -2345,6 +2465,13 @@ Core.SpellDB = {
     category = "druid",
     combatLogVoiceMap = {
       SPELL_CAST_SUCCESS = "드루_우르솔"
+    },
+  },
+  [106922] = {
+    id = 106922,
+    category = "druid",
+    combatLogVoiceMap = {
+      SPELL_CAST_SUCCESS = "드루_우르속"
     },
   },
   [5215] = {
@@ -3114,409 +3241,4 @@ Core.SpellDB = {
     },
   },
 
-  -- 악사
-  [183752] = {
-    id = 183752,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_분열"
-    },
-  },
-  [217832] = {
-    id = 217832,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_감금"
-    },
-  },
-  [198589] = {
-    id = 198589,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_흐릿"
-    },
-  },
-  [207684] = {
-    id = 207684,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_공포인장"
-    },
-  },
-  [179057] = {
-    id = 179057,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_혼회"
-    },
-  },
-  [196718] = {
-    id = 196718,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_어둠"
-    },
-  },
-  [370965] = {
-    id = 370965,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_START = "악사_사냥"
-    },
-  },
-  [390163] = {
-    id = 390163,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_하늘칙령"
-    },
-  },
-  -- 악사(파멸)
-  [191427] = {
-    id = 191427,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_탈태"
-    },
-  },
-  [206803] = {
-    id = 206803,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_하늘비"
-    },
-  },
-  [205604] = {
-    id = 205604,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_마역"
-    },
-  },
-  [198013] = {
-    id = 198013,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_안광"
-    },
-  },
-  [196555] = {
-    id = 196555,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_황천걸음",
-      SPELL_AURA_REMOVED = "악사_황천걸음끝"
-    },
-  },
-  [211881] = {
-    id = 211881,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_지분"
-    },
-  },
-  -- 악사(복수)
-  [212084] = {
-    id = 212084,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_지옥황폐"
-    },
-  },
-  [187827] = {
-    id = 187827,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_탈태"
-    },
-  },
-  [202137] = {
-    id = 202137,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_침묵인장"
-    },
-  },
-  [202138] = {
-    id = 202138,
-    category = "demonHunter",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "악사_사슬인장"
-    },
-  },
-
-  -- 기원사
-  [361227] = {
-    id = 361227,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_START = "공용_부활",
-      SPELL_EMPOWER_START = "공용_부활"
-    },
-  },
-  [357214] = {
-    id = 357214,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_폭풍날개",
-      SPELL_EMPOWER_START = "기원사_폭풍날개"
-    },
-  },
-  [368970] = {
-    id = 368970,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_꼬리치기",
-      SPELL_EMPOWER_START = "기원사_꼬리치기"
-    },
-  },
-  [408092] = {
-    id = 408092,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_지각변동",
-      SPELL_EMPOWER_START = "기원사_지각변동"
-    },
-  },
-  [357210] = {
-    id = 357210,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_깊은숨결",
-      SPELL_EMPOWER_START = "기원사_깊은숨결"
-    },
-  },
-  [357208] = {
-    id = 357208,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_불의숨결",
-      SPELL_EMPOWER_START = "기원사_불의숨결"
-    },
-  },
-  [370553] = {
-    id = 370553,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_전세역전",
-      SPELL_EMPOWER_START = "기원사_전세역전"
-    },
-  },
-  [365585] = {
-    id = 365585,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "공용_해제",
-      SPELL_EMPOWER_START = "공용_해제"
-    },
-  },
-  [351338] = {
-    id = 351338,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_진압",
-      SPELL_EMPOWER_START = "기원사_진압"
-    },
-  },
-  [358385] = {
-    id = 358385,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_산사태",
-      SPELL_EMPOWER_START = "기원사_산사태"
-    },
-  },
-  [363916] = {
-    id = 363916,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_흑요석비늘",
-      SPELL_EMPOWER_START = "기원사_흑요석비늘"
-    },
-  },
-  [374251] = {
-    id = 374251,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_소작의불길",
-      SPELL_EMPOWER_START = "기원사_소작의불길"
-    },
-  },
-  [374348] = {
-    id = 374348,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_소생의불길",
-      SPELL_EMPOWER_START = "기원사_소생의불길"
-    },
-  },
-  [360806] = {
-    id = 360806,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_START = "기원사_몽유병",
-      SPELL_EMPOWER_START = "기원사_몽유병"
-    },
-  },
-  [372048] = {
-    id = 372048,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_탄압의포효",
-      SPELL_EMPOWER_START = "기원사_탄압의포효"
-    },
-  },
-  [374227] = {
-    id = 374227,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_미풍",
-      SPELL_EMPOWER_START = "기원사_미풍"
-    },
-  },
-  [378464] = {
-    id = 378464,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_무효화장막",
-      SPELL_EMPOWER_START = "기원사_무효화장막"
-    },
-  },
-  [383005] = {
-    id = 383005,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_시간의굴레",
-      SPELL_EMPOWER_START = "기원사_시간의굴레"
-    },
-  },
-  [370388] = {
-    id = 370388,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_급속상승",
-      SPELL_EMPOWER_START = "기원사_급속상승"
-    },
-  },
-  [390386] = {
-    id = 390386,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "공용_블러드",
-      SPELL_EMPOWER_START = "공용_블러드"
-    },
-  },
-  [374968] = {
-    id = 374968,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_시간의와류",
-      SPELL_EMPOWER_START = "기원사_시간의와류"
-    },
-  },
-  -- 기원사(황폐)
-  [375087] = {
-    id = 375087,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_용의분노",
-      SPELL_EMPOWER_START = "기원사_용의분노"
-    },
-  },
-  [359073] = {
-    id = 359073,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_영원쇄도",
-      SPELL_EMPOWER_START = "기원사_영원쇄도"
-    },
-  },
-  [370665] = {
-    id = 370665,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_구출"
-    },
-  },
-  -- 기원사(보존)
-  [382614] = {
-    id = 382614,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_꿈의숨결",
-      SPELL_EMPOWER_START = "기원사_꿈의숨결"
-    },
-  },
-  [367226] = {
-    id = 367226,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_영혼만개",
-      SPELL_EMPOWER_START = "기원사_영혼만개"
-    },
-  },
-  [370960] = {
-    id = 370960,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_에메랄드",
-      SPELL_AURA_REMOVED = "기원사_에메랄드"
-    },
-  },
-  [357170] = {
-    id = 357170,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_시간팽창",
-      SPELL_EMPOWER_START = "기원사_시간팽창"
-    },
-  },
-  [378441] = {
-    id = 378441,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_시간정지",
-      SPELL_EMPOWER_START = "기원사_시간정지"
-    },
-  },
-  [363534] = {
-    id = 363534,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_되돌리기",
-      SPELL_EMPOWER_START = "기원사_되돌리기"
-    },
-  },
-  [359816] = {
-    id = 359816,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_꿈의비행",
-      SPELL_EMPOWER_START = "기원사_꿈의비행"
-    },
-  },
-  [370537] = {
-    id = 370537,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_정지장",
-      SPELL_EMPOWER_START = "기원사_정지장"
-    },
-  },
-  [377509] = {
-    id = 377509,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_꿈의투영",
-      SPELL_EMPOWER_START = "기원사_꿈의투영"
-    },
-  },
-  -- 기원사(증강)
-  [395152] = {
-    id = 395152,
-    category = "evoker",
-    combatLogVoiceMap = {
-      SPELL_CAST_SUCCESS = "기원사_칠흑의힘"
-    },
-  }
 }
